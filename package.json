@@ -1,18 +1,21 @@
 {
-  "name": "aiden-liam-frame-protection-installs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "dependencies": {
-    "astro": "^6.1.5"
-  },
-  "devDependencies": {
-    "typescript": "^6.0.2"
-  },
-  "packageManager": "pnpm@10.27.0"
+	"name": "aiden-liam-frame-protection-installs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"format": "prettier --write . --ignore-unknown"
+	},
+	"dependencies": {
+		"astro": "^6.1.5"
+	},
+	"devDependencies": {
+		"prettier": "^3.8.2",
+		"prettier-plugin-astro": "^0.14.1",
+		"typescript": "^6.0.2"
+	},
+	"packageManager": "pnpm@10.27.0"
 }
