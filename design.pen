@@ -141,7 +141,7 @@
               "content": "Certified RideWrap Installer",
               "fill": "$color.accent.primary",
               "x": 560.5,
-              "y": 195
+              "y": 194
             },
             {
               "id": "vNHYV",
@@ -157,7 +157,7 @@
               "fontSize": 56,
               "fontWeight": "700",
               "letterSpacing": -0.5,
-              "y": 248,
+              "y": 247,
               "height": 0,
               "x": 0
             },
@@ -168,8 +168,8 @@
               "name": "ctaPrimary",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 648.5,
-              "y": 396,
+              "x": 643,
+              "y": 395,
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
@@ -1651,19 +1651,19 @@
                       ]
                     },
                     {
-                      "id": "QBypr",
+                      "id": "Gqq3G",
                       "type": "ref",
-                      "ref": "biaQ6",
+                      "ref": "e5nOj",
                       "name": "cardRHBtn",
                       "width": "fit_content",
                       "height": "fit_content",
                       "x": 44,
-                      "y": 319,
+                      "y": 313,
                       "descendants": {
-                        "E4OKj": {
+                        "z09vU": {
                           "content": "Book Richmond Hill",
-                          "x": 28,
-                          "y": 14
+                          "x": 32,
+                          "y": 16
                         }
                       }
                     }
@@ -1737,19 +1737,19 @@
                       ]
                     },
                     {
-                      "id": "14l7A",
+                      "id": "YWbWb",
                       "type": "ref",
-                      "ref": "biaQ6",
+                      "ref": "e5nOj",
                       "name": "cardINBtn",
                       "width": "fit_content",
                       "height": "fit_content",
                       "x": 44,
-                      "y": 319,
+                      "y": 313,
                       "descendants": {
-                        "E4OKj": {
+                        "z09vU": {
                           "content": "Book Innisfil",
-                          "x": 28,
-                          "y": 14
+                          "x": 32,
+                          "y": 16
                         }
                       }
                     }
@@ -1988,7 +1988,7 @@
               "ref": "e5nOj",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 592.5,
+              "x": 579,
               "y": 170,
               "descendants": {
                 "z09vU": {
@@ -2224,39 +2224,15 @@
           "fontWeight": "700"
         },
         {
-          "type": "text",
-          "id": "lXz6W",
-          "name": "libHint",
-          "fill": "$color.text.primary",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "Primary",
-          "fontFamily": "Inter",
-          "fontSize": 15,
-          "fontWeight": "500"
-        },
-        {
-          "type": "text",
-          "id": "07gPl",
-          "name": "libHint",
-          "fill": "$color.text.primary",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "Large",
-          "fontFamily": "Inter",
-          "fontSize": 13,
-          "fontWeight": "500"
-        },
-        {
           "type": "frame",
           "id": "e5nOj",
-          "name": "Button / Primary / Large",
+          "name": "Button",
           "reusable": true,
           "fill": "$color.accent.primary",
           "cornerRadius": 999,
           "padding": [
-            16,
-            32
+            "$button.padding.y",
+            "$button.padding.x"
           ],
           "justifyContent": "center",
           "alignItems": "center",
@@ -2268,45 +2244,7 @@
               "fill": "$color.text.inverse",
               "content": "Button",
               "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "700"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "5PMu6",
-          "name": "libHint",
-          "fill": "$color.text.primary",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "Medium",
-          "fontFamily": "Inter",
-          "fontSize": 13,
-          "fontWeight": "500"
-        },
-        {
-          "type": "frame",
-          "id": "biaQ6",
-          "name": "Button / Primary / Medium",
-          "reusable": true,
-          "fill": "$color.accent.primary",
-          "cornerRadius": 999,
-          "padding": [
-            14,
-            28
-          ],
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "E4OKj",
-              "name": "btnMedLabel",
-              "fill": "$color.text.inverse",
-              "content": "Button",
-              "fontFamily": "Inter",
-              "fontSize": 14,
+              "fontSize": "$button.text.size",
               "fontWeight": "700"
             }
           ]
@@ -2317,7 +2255,7 @@
       "type": "frame",
       "id": "rnb0u",
       "x": -460,
-      "y": 392,
+      "y": 178,
       "name": "Card Components",
       "width": 420,
       "fill": "#FFFFFF",
@@ -2548,7 +2486,7 @@
                   "type": "icon_font",
                   "id": "bjmHU",
                   "name": "menuIcon",
-                  "rotation": -0.15521276403698198,
+                  "rotation": -0.155212764036982,
                   "width": 20,
                   "height": 20,
                   "iconFontName": "menu",
@@ -2601,7 +2539,7 @@
               "content": "Certified RideWrap Installer",
               "fill": "$color.accent.primary",
               "x": 75.5,
-              "y": 169.5,
+              "y": 174.5,
               "fontSize": 18,
               "textAlign": "center"
             },
@@ -2619,7 +2557,7 @@
               "fontSize": 36,
               "fontWeight": "700",
               "letterSpacing": -0.5,
-              "y": 207.5,
+              "y": 212.5,
               "height": 0,
               "x": 20
             },
@@ -2630,13 +2568,13 @@
               "name": "ctaPrimary",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 123.5,
-              "y": 301.5,
+              "x": 137,
+              "y": 306.5,
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
-                  "x": 32,
-                  "y": 16
+                  "x": 24,
+                  "y": 12
                 }
               }
             }
@@ -4190,19 +4128,19 @@
                       ]
                     },
                     {
-                      "id": "tHCAo",
+                      "id": "gRHBn",
                       "type": "ref",
-                      "ref": "biaQ6",
+                      "ref": "e5nOj",
                       "name": "cardRHBtn",
                       "width": "fit_content",
                       "height": "fit_content",
                       "x": 24,
-                      "y": 211,
+                      "y": 217,
                       "descendants": {
-                        "E4OKj": {
+                        "z09vU": {
                           "content": "Book Richmond Hill",
-                          "x": 28,
-                          "y": 14
+                          "x": 24,
+                          "y": 12
                         }
                       }
                     }
@@ -4273,19 +4211,19 @@
                       ]
                     },
                     {
-                      "id": "I9eW5",
+                      "id": "wP23W",
                       "type": "ref",
-                      "ref": "biaQ6",
+                      "ref": "e5nOj",
                       "name": "cardINBtn",
                       "width": "fit_content",
                       "height": "fit_content",
                       "x": 24,
-                      "y": 211,
+                      "y": 217,
                       "descendants": {
-                        "E4OKj": {
+                        "z09vU": {
                           "content": "Book Innisfil",
-                          "x": 28,
-                          "y": 14
+                          "x": 24,
+                          "y": 12
                         }
                       }
                     }
@@ -4549,13 +4487,13 @@
               "ref": "e5nOj",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 67.5,
+              "x": 89.5,
               "y": 160,
               "descendants": {
                 "z09vU": {
                   "content": "Book your installation today",
-                  "x": 32,
-                  "y": 16
+                  "x": 24,
+                  "y": 12
                 }
               }
             }
@@ -4835,7 +4773,7 @@
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
-                  "x": 100.5,
+                  "x": 95,
                   "y": 16
                 }
               }
@@ -4912,7 +4850,7 @@
                   "type": "icon_font",
                   "id": "NHSpK",
                   "name": "menuIcon",
-                  "rotation": -0.15521276403698198,
+                  "rotation": -0.155212764036982,
                   "width": 20,
                   "height": 20,
                   "iconFontName": "menu",
@@ -4962,7 +4900,7 @@
               "content": "Certified RideWrap Installer",
               "fill": "$color.accent.primary",
               "x": 252,
-              "y": 135.5,
+              "y": 137.5,
               "fontSize": 20,
               "textAlign": "center"
             },
@@ -4980,7 +4918,7 @@
               "fontSize": 48,
               "fontWeight": "700",
               "letterSpacing": -0.5,
-              "y": 175.5,
+              "y": 177.5,
               "height": 0,
               "x": 32
             },
@@ -4991,13 +4929,13 @@
               "name": "ctaPrimary",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 313.5,
-              "y": 295.5,
+              "x": 317.5,
+              "y": 297.5,
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
-                  "x": 32,
-                  "y": 16
+                  "x": 28,
+                  "y": 14
                 }
               }
             }
@@ -6555,16 +6493,16 @@
                       ]
                     },
                     {
-                      "id": "nfajN",
+                      "id": "XNqC1",
                       "type": "ref",
-                      "ref": "biaQ6",
+                      "ref": "e5nOj",
                       "name": "cardRHBtn",
                       "width": "fit_content",
                       "height": "fit_content",
                       "x": 24,
                       "y": 211,
                       "descendants": {
-                        "E4OKj": {
+                        "z09vU": {
                           "content": "Book Richmond Hill",
                           "x": 28,
                           "y": 14
@@ -6638,16 +6576,16 @@
                       ]
                     },
                     {
-                      "id": "yLcBJ",
+                      "id": "bCiFg",
                       "type": "ref",
-                      "ref": "biaQ6",
+                      "ref": "e5nOj",
                       "name": "cardINBtn",
                       "width": "fit_content",
                       "height": "fit_content",
                       "x": 24,
                       "y": 211,
                       "descendants": {
-                        "E4OKj": {
+                        "z09vU": {
                           "content": "Book Innisfil",
                           "x": 28,
                           "y": 14
@@ -6914,13 +6852,13 @@
               "ref": "e5nOj",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 257.5,
+              "x": 261.5,
               "y": 175,
               "descendants": {
                 "z09vU": {
                   "content": "Book your installation today",
-                  "x": 32,
-                  "y": 16
+                  "x": 28,
+                  "y": 14
                 }
               }
             }
@@ -7046,6 +6984,75 @@
     "color.border.primary": {
       "type": "color",
       "value": "#E5E5E5"
+    },
+    "button.padding.x": {
+      "type": "number",
+      "value": [
+        {
+          "value": 32,
+          "theme": {
+            "device": "desktop"
+          }
+        },
+        {
+          "value": 28,
+          "theme": {
+            "device": "tablet"
+          }
+        },
+        {
+          "value": 24,
+          "theme": {
+            "device": "mobile"
+          }
+        }
+      ]
+    },
+    "button.padding.y": {
+      "type": "number",
+      "value": [
+        {
+          "value": 16,
+          "theme": {
+            "device": "desktop"
+          }
+        },
+        {
+          "value": 14,
+          "theme": {
+            "device": "tablet"
+          }
+        },
+        {
+          "value": 12,
+          "theme": {
+            "device": "mobile"
+          }
+        }
+      ]
+    },
+    "button.text.size": {
+      "type": "number",
+      "value": [
+        {
+          "value": 16,
+          "theme": {
+            "device": "desktop"
+          }
+        },
+        {
+          "value": 14,
+          "theme": {
+            "device": "tablet"
+          }
+        },
+        {
+          "value": 12,
+          "theme": {
+            "device": "mobile"
+          }
+        }
+      ]
     }
   }
 }
