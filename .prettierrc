@@ -1,7 +1,7 @@
 {
 	"useTabs": true,
 	"tabWidth": 4,
-	"plugins": ["prettier-plugin-astro"],
+	"plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
 	"overrides": [
 		{
 			"files": "*.astro",
@@ -9,6 +9,5 @@
 				"parser": "astro"
 			}
 		}
-	],
-	"ignorePatterns": ["node_modules", "dist", "pnpm-lock.yaml"]
+	]
 }
