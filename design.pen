@@ -28,7 +28,7 @@
             "fill": "$color.border.primary"
           },
           "padding": [
-            32,
+            18,
             80
           ],
           "justifyContent": "space_between",
@@ -48,8 +48,8 @@
                   "fill": "$color.text.primary",
                   "content": "Aiden Liam Bicycle Protection",
                   "fontFamily": "Inter",
-                  "fontSize": 20,
-                  "fontWeight": "700"
+                  "fontSize": 18,
+                  "fontWeight": "600"
                 }
               ]
             },
@@ -65,7 +65,9 @@
                   "type": "ref",
                   "ref": "uxFSX",
                   "name": "nav1",
-                  "content": "Services"
+                  "content": "Services",
+                  "fontStyle": "normal",
+                  "fontWeight": "500"
                 },
                 {
                   "id": "kc2cq",
@@ -73,7 +75,9 @@
                   "ref": "uxFSX",
                   "name": "navPricing",
                   "content": "Pricing",
-                  "x": 84
+                  "x": 83,
+                  "fontStyle": "normal",
+                  "fontWeight": "500"
                 },
                 {
                   "id": "4vMpL",
@@ -81,7 +85,9 @@
                   "ref": "uxFSX",
                   "name": "nav3",
                   "content": "Locations",
-                  "x": 156
+                  "x": 154,
+                  "fontStyle": "normal",
+                  "fontWeight": "500"
                 },
                 {
                   "id": "ILCaq",
@@ -89,7 +95,9 @@
                   "ref": "uxFSX",
                   "name": "nav4",
                   "content": "Contact",
-                  "x": 247
+                  "x": 244,
+                  "fontStyle": "normal",
+                  "fontWeight": "500"
                 },
                 {
                   "id": "XR8vg",
@@ -97,7 +105,9 @@
                   "ref": "uxFSX",
                   "name": "nav2",
                   "content": "FAQ",
-                  "x": 325
+                  "x": 321,
+                  "fontStyle": "normal",
+                  "fontWeight": "500"
                 }
               ]
             }
@@ -2405,7 +2415,7 @@
             "fill": "$color.border.primary"
           },
           "padding": [
-            16,
+            14,
             20
           ],
           "justifyContent": "space_between",
@@ -2425,8 +2435,8 @@
                   "fill": "$color.text.primary",
                   "content": "Aiden Liam Bicycle Protection",
                   "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "700"
+                  "fontSize": 14,
+                  "fontWeight": "600"
                 }
               ]
             },
@@ -4563,7 +4573,7 @@
                   "content": "Menu",
                   "fontFamily": "Inter",
                   "fontSize": 20,
-                  "fontWeight": "700"
+                  "fontWeight": "600"
                 },
                 {
                   "type": "frame",
@@ -4615,8 +4625,9 @@
                   "ref": "uxFSX",
                   "content": "Services",
                   "fontSize": 18,
-                  "fontWeight": "700",
-                  "name": "nav1"
+                  "fontWeight": "500",
+                  "name": "nav1",
+                  "fontStyle": "normal"
                 },
                 {
                   "id": "sLf8N",
@@ -4624,8 +4635,9 @@
                   "ref": "uxFSX",
                   "content": "Pricing",
                   "fontSize": 18,
-                  "fontWeight": "700",
-                  "name": "nav2"
+                  "fontWeight": "500",
+                  "name": "nav2",
+                  "fontStyle": "normal"
                 },
                 {
                   "id": "L8pki",
@@ -4633,8 +4645,9 @@
                   "ref": "uxFSX",
                   "content": "Locations",
                   "fontSize": 18,
-                  "fontWeight": "700",
-                  "name": "nav3"
+                  "fontWeight": "500",
+                  "name": "nav3",
+                  "fontStyle": "normal"
                 },
                 {
                   "id": "255X3",
@@ -4642,8 +4655,9 @@
                   "ref": "uxFSX",
                   "content": "FAQ",
                   "fontSize": 18,
-                  "fontWeight": "700",
-                  "name": "nav4"
+                  "fontWeight": "500",
+                  "name": "nav4",
+                  "fontStyle": "normal"
                 },
                 {
                   "id": "8sx8a",
@@ -4651,8 +4665,9 @@
                   "ref": "uxFSX",
                   "content": "Contact",
                   "fontSize": 18,
-                  "fontWeight": "700",
-                  "name": "nav5"
+                  "fontWeight": "500",
+                  "name": "nav5",
+                  "fontStyle": "normal"
                 },
                 {
                   "type": "frame",
@@ -4769,7 +4784,7 @@
             "fill": "$color.border.primary"
           },
           "padding": [
-            20,
+            16,
             32
           ],
           "justifyContent": "space_between",
@@ -4789,8 +4804,8 @@
                   "fill": "$color.text.primary",
                   "content": "Aiden Liam Bicycle Protection",
                   "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "700"
+                  "fontSize": 16,
+                  "fontWeight": "600"
                 }
               ]
             },
