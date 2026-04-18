@@ -1,6 +1,10 @@
 {
 	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
-		"strict": true
+		"strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["src/*"]
+		}
 	}
 }
