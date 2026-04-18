@@ -1,22 +1,24 @@
 ---
+import Button from "~/components/ui/Button.astro";
+import MenuIcon from "~/components/ui/icons/Menu.astro";
+import XMarkIcon from "~/components/ui/icons/XMark.astro";
+import InstagramIcon from "~/components/ui/icons/Instagram.astro";
+import FacebookIcon from "~/components/ui/icons/Facebook.astro";
+import Link from "~/components/ui/Link.astro";
+import Divider from "~/components/ui/Divider.astro";
+
 type NavItem = {
 	href: string;
 	label: string;
 };
 
-type Props = {
-	navItems?: NavItem[];
-};
-
-const {
-	navItems = [
-		{ href: "#services", label: "Services" },
-		{ href: "#pricing", label: "Pricing" },
-		{ href: "#locations", label: "Locations" },
-		{ href: "#contact", label: "Contact" },
-		{ href: "#faq", label: "FAQ" },
-	],
-} = Astro.props as Props;
+const navItems: NavItem[] = [
+	{ href: "#services", label: "Services" },
+	{ href: "#pricing", label: "Pricing" },
+	{ href: "#locations", label: "Locations" },
+	{ href: "#contact", label: "Contact" },
+	{ href: "#faq", label: "FAQ" },
+];
 ---
 
 <header
@@ -26,7 +28,7 @@ const {
 		class="mx-auto flex w-full items-center justify-between px-5 py-3.5 md:px-8 md:py-4 lg:px-20 lg:py-5"
 	>
 		<p
-			class="text-text-primary text-sm leading-4 font-semibold md:text-sm md:leading-5 lg:text-lg lg:leading-6"
+			class="text-text-primary text-sm leading-4 font-semibold md:text-base md:leading-5 lg:text-lg lg:leading-6"
 		>
 			Aiden Liam Bicycle Protection
 		</p>
@@ -43,5 +45,111 @@ const {
 				))
 			}
 		</nav>
+
+		<button class="p-1 lg:hidden" id="mobile-nav-open" type="button">
+			<MenuIcon class="size-5" />
+		</button>
+
+		<dialog
+			id="mobile-nav-dialog"
+			class="backdrop:bg-overlay-dark m-0 h-dvh max-h-none w-screen max-w-none bg-transparent p-0"
+		>
+			<div
+				class="border-border-primary bg-surface-base ml-auto flex h-full w-4/5 max-w-80 flex-col gap-5 border-l py-5"
+			>
+				<div class="flex items-center justify-between px-5">
+					<span
+						class="text-text-primary text-xl leading-6 font-semibold"
+						>Menu</span
+					>
+					<button id="mobile-nav-close">
+						<XMarkIcon class="size-5" />
+					</button>
+				</div>
+
+				<Divider />
+
+				{
+					navItems.map((item) => (
+						<Link
+							class="mx-5 w-fit text-lg leading-6 font-medium"
+							href={item.href}
+						>
+							{item.label}
+						</Link>
+					))
+				}
+
+				<Divider />
+
+				<div class="flex w-full items-center gap-4 px-5">
+					<Link
+						aria-label="Instagram"
+						class="p-1"
+						href="https://www.instagram.com/aidenliamframeprotection"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<InstagramIcon class="size-5" />
+					</Link>
+					<Link
+						aria-label="Facebook"
+						class="p-1"
+						href="https://www.facebook.com/aidenliamframeprotectioninstalls"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<FacebookIcon class="size-5" />
+					</Link>
+				</div>
+
+				<Divider />
+
+				<Button class="mx-5" href="#contact">Get a quote</Button>
+			</div>
+		</dialog>
 	</div>
 </header>
+
+<script>
+	const openButton = document.getElementById(
+		"mobile-nav-open",
+	) as HTMLButtonElement;
+	const closeButton = document.getElementById(
+		"mobile-nav-close",
+	) as HTMLButtonElement;
+	const dialog = document.getElementById(
+		"mobile-nav-dialog",
+	) as HTMLDialogElement;
+	const links = dialog?.querySelectorAll("a");
+
+	openButton?.addEventListener("click", () => {
+		dialog?.showModal();
+	});
+
+	closeButton?.addEventListener("click", () => {
+		dialog?.close();
+	});
+
+	links?.forEach((link) => {
+		if (link.getAttribute("target") === "_blank") {
+			return;
+		}
+
+		link.addEventListener("click", () => {
+			dialog?.close();
+		});
+	});
+
+	dialog?.addEventListener("click", (event) => {
+		if (event.target === dialog) {
+			dialog.close();
+		}
+	});
+</script>
+
+<style>
+	body:has(#mobile-nav-dialog:open) {
+		overflow: hidden;
+	}
+</style>

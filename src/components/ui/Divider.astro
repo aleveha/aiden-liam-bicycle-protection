@@ -1,0 +1,8 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "~/lib/cn";
+
+const { class: className, ...props } = Astro.props as HTMLAttributes<"hr">;
+---
+
+<hr class={cn("border-border-primary w-full", className)} {...props} />
