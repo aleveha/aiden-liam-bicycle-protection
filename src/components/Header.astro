@@ -1,0 +1,47 @@
+---
+type NavItem = {
+	href: string;
+	label: string;
+};
+
+type Props = {
+	navItems?: NavItem[];
+};
+
+const {
+	navItems = [
+		{ href: "#services", label: "Services" },
+		{ href: "#pricing", label: "Pricing" },
+		{ href: "#locations", label: "Locations" },
+		{ href: "#contact", label: "Contact" },
+		{ href: "#faq", label: "FAQ" },
+	],
+} = Astro.props as Props;
+---
+
+<header
+	class="border-border-primary bg-surface-base sticky top-0 z-40 w-full border-b"
+>
+	<div
+		class="mx-auto flex w-full items-center justify-between px-5 py-3.5 md:px-8 md:py-4 lg:px-20 lg:py-5"
+	>
+		<p
+			class="text-text-primary text-sm leading-4 font-semibold md:text-sm md:leading-5 lg:text-lg lg:leading-6"
+		>
+			Aiden Liam Bicycle Protection
+		</p>
+
+		<nav class="hidden items-center gap-6 lg:flex">
+			{
+				navItems.map((item) => (
+					<a
+						href={item.href}
+						class="text-text-primary hover:text-accent-primary text-sm leading-4 font-medium transition-colors duration-150 md:text-base md:leading-5"
+					>
+						{item.label}
+					</a>
+				))
+			}
+		</nav>
+	</div>
+</header>
