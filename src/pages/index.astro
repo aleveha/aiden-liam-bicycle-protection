@@ -2,6 +2,7 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log("This runs in your terminal, not the browser!");
+import Button from "~/components/Button.astro";
 import "~/styles/global.css";
 ---
 
@@ -12,6 +13,16 @@ import "~/styles/global.css";
 		<title>Aiden Liam Bicycle Protection</title>
 	</head>
 	<body>
-		<h1 class="text-3xl font-bold text-orange-500">Hello, World!</h1>
+		<main>
+			<section class="layout-section items-center">
+				<p class="typography-headline-accent">
+					Certified RideWrap Installer
+				</p>
+				<h1 class="typography-headline-primary text-center">
+					Protect your bike<br />Ride without worry
+				</h1>
+				<Button class="w-fit">Get a quote</Button>
+			</section>
+		</main>
 	</body>
 </html>
