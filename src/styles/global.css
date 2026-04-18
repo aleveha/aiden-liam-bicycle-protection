@@ -12,6 +12,10 @@
 }
 
 @layer components {
+	.layout-section {
+		@apply flex w-full flex-col gap-4 px-5 py-8 md:gap-5 md:px-8 md:py-10 lg:gap-6 lg:px-10 lg:py-12;
+	}
+
 	.typography-headline-accent {
 		@apply text-accent-primary text-lg font-semibold md:text-xl lg:text-2xl;
 	}
