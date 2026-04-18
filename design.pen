@@ -168,12 +168,12 @@
               "name": "ctaPrimary",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 643,
+              "x": 635,
               "y": 395,
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
-                  "x": 32,
+                  "x": 40,
                   "y": 16
                 }
               }
@@ -1662,7 +1662,7 @@
                       "descendants": {
                         "z09vU": {
                           "content": "Book Richmond Hill",
-                          "x": 32,
+                          "x": 40,
                           "y": 16
                         }
                       }
@@ -1748,7 +1748,7 @@
                       "descendants": {
                         "z09vU": {
                           "content": "Book Innisfil",
-                          "x": 32,
+                          "x": 40,
                           "y": 16
                         }
                       }
@@ -1988,12 +1988,12 @@
               "ref": "e5nOj",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 579,
+              "x": 571,
               "y": 170,
               "descendants": {
                 "z09vU": {
                   "content": "Book your installation today",
-                  "x": 32,
+                  "x": 40,
                   "y": 16
                 }
               }
@@ -2568,12 +2568,12 @@
               "name": "ctaPrimary",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 137,
+              "x": 129,
               "y": 306.5,
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
-                  "x": 24,
+                  "x": 32,
                   "y": 12
                 }
               }
@@ -4139,7 +4139,7 @@
                       "descendants": {
                         "z09vU": {
                           "content": "Book Richmond Hill",
-                          "x": 24,
+                          "x": 32,
                           "y": 12
                         }
                       }
@@ -4222,7 +4222,7 @@
                       "descendants": {
                         "z09vU": {
                           "content": "Book Innisfil",
-                          "x": 24,
+                          "x": 32,
                           "y": 12
                         }
                       }
@@ -4487,12 +4487,12 @@
               "ref": "e5nOj",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 89.5,
+              "x": 81.5,
               "y": 160,
               "descendants": {
                 "z09vU": {
                   "content": "Book your installation today",
-                  "x": 24,
+                  "x": 32,
                   "y": 12
                 }
               }
@@ -4929,12 +4929,12 @@
               "name": "ctaPrimary",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 317.5,
+              "x": 309.5,
               "y": 297.5,
               "descendants": {
                 "z09vU": {
                   "content": "Get a quote",
-                  "x": 28,
+                  "x": 36,
                   "y": 14
                 }
               }
@@ -6504,7 +6504,7 @@
                       "descendants": {
                         "z09vU": {
                           "content": "Book Richmond Hill",
-                          "x": 28,
+                          "x": 36,
                           "y": 14
                         }
                       }
@@ -6587,7 +6587,7 @@
                       "descendants": {
                         "z09vU": {
                           "content": "Book Innisfil",
-                          "x": 28,
+                          "x": 36,
                           "y": 14
                         }
                       }
@@ -6852,12 +6852,12 @@
               "ref": "e5nOj",
               "width": "fit_content",
               "height": "fit_content",
-              "x": 261.5,
+              "x": 253.5,
               "y": 175,
               "descendants": {
                 "z09vU": {
                   "content": "Book your installation today",
-                  "x": 28,
+                  "x": 36,
                   "y": 14
                 }
               }
@@ -6989,19 +6989,19 @@
       "type": "number",
       "value": [
         {
-          "value": 32,
+          "value": 40,
           "theme": {
             "device": "desktop"
           }
         },
         {
-          "value": 28,
+          "value": 36,
           "theme": {
             "device": "tablet"
           }
         },
         {
-          "value": 24,
+          "value": 32,
           "theme": {
             "device": "mobile"
           }
