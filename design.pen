@@ -1,5 +1,5 @@
 {
-  "version": "2.10",
+  "version": "2.11",
   "children": [
     {
       "type": "frame",
@@ -2083,43 +2083,13 @@
       "children": [
         {
           "type": "text",
-          "id": "IwNbd",
-          "name": "libTitle",
-          "fill": "$color.text.primary",
-          "content": "Headline",
-          "fontFamily": "Inter",
-          "fontSize": 16,
-          "fontWeight": "700"
-        },
-        {
-          "type": "text",
-          "id": "wmQCd",
-          "name": "variantLabel",
-          "fill": "$color.text.primary",
-          "content": "Primary Variant",
-          "fontFamily": "Inter",
-          "fontSize": 12,
-          "fontWeight": "600"
-        },
-        {
-          "type": "text",
           "id": "x2UNU",
           "name": "Headline / Accent / Orange",
           "reusable": true,
           "fill": "$color.accent.primary",
-          "content": "Certified RideWrap Installer",
+          "content": "Headline accent",
           "fontFamily": "Inter",
           "fontSize": 24,
-          "fontWeight": "600"
-        },
-        {
-          "type": "text",
-          "id": "DHj15",
-          "name": "variantLabel",
-          "fill": "$color.text.primary",
-          "content": "Secondary Variant",
-          "fontFamily": "Inter",
-          "fontSize": 12,
           "fontWeight": "600"
         },
         {
@@ -2128,7 +2098,7 @@
           "name": "Headline / Secondary / Ambient",
           "reusable": true,
           "fill": "$color.text.secondary",
-          "content": "Full protection. Premium service. For riders who care.",
+          "content": "Headline secondary",
           "lineHeight": 1.3,
           "fontFamily": "Inter",
           "fontSize": 20,
@@ -2136,21 +2106,11 @@
         },
         {
           "type": "text",
-          "id": "pbizt",
-          "name": "variantLabel",
-          "fill": "$color.text.primary",
-          "content": "Section Title",
-          "fontFamily": "Inter",
-          "fontSize": 12,
-          "fontWeight": "600"
-        },
-        {
-          "type": "text",
           "id": "ZDfDw",
           "name": "Headline / Primary / Section",
           "reusable": true,
           "fill": "$color.text.primary",
-          "content": "Section title",
+          "content": "Headline title",
           "lineHeight": 1.1,
           "textAlign": "center",
           "fontFamily": "Inter",
