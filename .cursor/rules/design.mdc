@@ -1,0 +1,16 @@
+---
+description: Design-first implementation
+alwaysApply: true
+---
+
+# Design Source of Truth
+
+- Treat `design.pen` as the source of truth unless the user explicitly says otherwise.
+- Default behavior: update code to match design, not design to match code.
+- Before implementing UI changes, inspect relevant nodes in `design.pen` (using Pencil MCP if available).
+- Validate implementation by comparing design vs app visually:
+    - capture design screenshots (using Pencil MCP, i.e. `get_screenshot`, if available)
+    - verify app output against the same section/screen
+- If there is a mismatch, align code to design tokens, layout, spacing, and typography.
+- If design and request conflict, ask the user which source should win.
+- Any visual changes or new sections should be made to the `design.pen` first and verified by the user before making these changes to the codebase.

@@ -1,0 +1,13 @@
+---
+description: Require responsive behavior across mobile, tablet, and desktop
+alwaysApply: true
+---
+
+# Responsive by Default
+
+- Every UI implementation must work across mobile, tablet, and desktop.
+- Match breakpoint behavior from `design.pen` when available.
+- Validate spacing, typography, and layout at all target breakpoints.
+- Avoid desktop-only assumptions; mobile behavior must be intentionally designed.
+- Prefer responsive Tailwind classes and consistent layout primitives.
+- If a requested change risks breaking a breakpoint, update all affected breakpoints in the same task.

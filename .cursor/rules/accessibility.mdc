@@ -1,0 +1,13 @@
+---
+description: Accessibility requirements
+alwaysApply: true
+---
+
+# Accessibility
+
+- Ensure interactive elements are semantic (`button`, `a`, form controls) and keyboard accessible.
+- Add and maintain appropriate ARIA labels/attributes when semantics alone are not enough.
+- Preserve visible focus states and keyboard navigation behavior.
+- Ensure dialogs/menus/sheets support close via expected interactions (e.g., Escape or close controls).
+- Keep color contrast and readable typography in mind when applying styles.
+- Treat accessibility regressions as bugs and fix them during implementation.

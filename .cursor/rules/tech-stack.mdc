@@ -1,0 +1,13 @@
+---
+description: Technologies and best practices
+alwaysApply: true
+---
+
+# Technology Standards
+
+- Prefer Astro-first patterns and keep components mostly declarative.
+- Use Tailwind utility classes for styling by default, use `cn` utility helper function to merge styles.
+- Minimize custom JS logic; only add behavior required for UX.
+- Avoid over-engineering: pick the simplest solution that satisfies the requirement.
+- Keep components small and reusable (extract shared UI pieces when repeated).
+- Prefer composition over complex abstractions.
