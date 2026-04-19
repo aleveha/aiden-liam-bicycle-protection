@@ -1,0 +1,27 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "~/lib/cn";
+
+type CardSize = "small" | "medium" | "large";
+
+type Props = HTMLAttributes<"article"> & {
+	size?: CardSize;
+};
+
+const { size = "medium", class: className, ...props } = Astro.props as Props;
+---
+
+<article
+	class={cn(
+		"border-border-primary bg-surface-base flex w-full flex-col border",
+		{
+			"gap-3 rounded-xl px-4.5 py-3.5": size === "small",
+			"gap-4 rounded-2xl px-6 py-5": size === "medium",
+			"gap-4 rounded-3xl p-7": size === "large",
+		},
+		className,
+	)}
+	{...props}
+>
+	<slot />
+</article>
