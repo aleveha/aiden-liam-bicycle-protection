@@ -1,6 +1,24 @@
 ---
 import Card from "~/components/ui/Card.astro";
 import Section from "~/components/ui/Section.astro";
+
+type ServiceItem = {
+	title: string;
+	description: string;
+};
+
+const items: ServiceItem[] = [
+	{
+		title: "Paint protection film",
+		description:
+			"Custom RideWrap coverage for high-wear zones - perfectly covers against chips, rub, and trail debris.",
+	},
+	{
+		title: "Ceramic coating",
+		description:
+			"Hydrophobic gloss, easier washes, and longer-lasting shine on protected surfaces.",
+	},
+];
 ---
 
 <Section>
@@ -14,39 +32,23 @@ import Section from "~/components/ui/Section.astro";
 		Full protection. Premium service. For riders who care.
 	</p>
 
-	<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
-		<Card
-			class="aspect-4/3 items-center justify-center bg-[#3b3f46] text-center"
-			noBorder
-			size="large"
-			transparent
-		>
-			<h3 class="text-text-inverse text-2xl font-bold md:text-3xl">
-				Paint protection film
-			</h3>
-			<p
-				class="text-text-inverse text-sm font-medium sm:text-balance md:text-base"
-			>
-				Custom RideWrap coverage for high-wear zones - perfectly covers
-				against chips, rub, and trail debris.
-			</p>
-		</Card>
-
-		<Card
-			class="aspect-4/3 items-center justify-center bg-[#4a4b44] text-center"
-			noBorder
-			size="large"
-			transparent
-		>
-			<h3 class="text-text-inverse text-2xl font-bold md:text-3xl">
-				Ceramic coating
-			</h3>
-			<p
-				class="text-text-inverse text-sm font-medium sm:text-balance md:text-base"
-			>
-				Hydrophobic gloss, easier washes, and longer-lasting shine on
-				protected surfaces.
-			</p>
-		</Card>
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+		{
+			items.map(({ title, description }) => (
+				<Card
+					class="aspect-4/3 items-center justify-center bg-[#1a1d21] text-center"
+					noBorder
+					size="large"
+					transparent
+				>
+					<h3 class="text-text-inverse text-2xl font-bold md:text-3xl">
+						{title}
+					</h3>
+					<p class="text-text-inverse text-sm font-medium sm:text-balance md:text-base">
+						{description}
+					</p>
+				</Card>
+			))
+		}
 	</div>
 </Section>
