@@ -1,0 +1,58 @@
+---
+import Card from "~/components/ui/Card.astro";
+import Section from "~/components/ui/Section.astro";
+
+type FaqItem = {
+	question: string;
+	answer: string;
+};
+
+const items: FaqItem[] = [
+	{
+		question: "What areas of the bike do you typically protect with PPF?",
+		answer: "Most riders protect the downtube, headtube, chainstays, seatstays, fork, and other high-rub or impact zones. Coverage depends on your frame, riding style, and budget.",
+	},
+	{
+		question: "Can you install PPF or ceramic coating on a used bike?",
+		answer: "Yes, as long as the paint and clear coat are in suitable condition. Existing chips, scratches, or touch-ups may still show through the film, so we assess the bike first.",
+	},
+	{
+		question: "Can PPF be removed or replaced later?",
+		answer: "Yes. Individual sections can be removed and replaced if they get damaged or worn over time, which is one of the benefits of using film on high-wear areas.",
+	},
+	{
+		question: "Does my bike need to be perfectly clean before drop-off?",
+		answer: "No. We handle the prep and degreasing as part of the install process. It helps if the bike is reasonably clean, but it does not need to be detailed before you bring it in.",
+	},
+	{
+		question:
+			"How do I care for the bike after PPF or ceramic coating is installed?",
+		answer: "We will give you aftercare guidance at pickup. In general, use bike-safe cleaning methods, avoid harsh chemicals, and let the install fully settle before aggressive washing or riding in rough conditions.",
+	},
+];
+---
+
+<Section>
+	<p class="typography-headline-accent">FAQ</p>
+
+	<h2 class="typography-headline-primary">
+		Questions riders ask before booking
+	</h2>
+
+	<p class="typography-headline-secondary">
+		Everything you need to know before booking your bike protection service.
+	</p>
+
+	<div class="space-y-4">
+		{
+			items.map(({ question, answer }) => (
+				<Card class="gap-2">
+					<h3 class="text-text-primary text-xl font-semibold">
+						{question}
+					</h3>
+					<p class="text-text-secondary">{answer}</p>
+				</Card>
+			))
+		}
+	</div>
+</Section>
