@@ -1,0 +1,69 @@
+---
+import type { SvgComponent } from "astro/types";
+import Card from "~/components/ui/Card.astro";
+import Section from "~/components/ui/Section.astro";
+import BikeIcon from "~/components/ui/icons/Bike.astro";
+import ClockFadingIcon from "~/components/ui/icons/ClockFading.astro";
+import DropletsIcon from "~/components/ui/icons/Droplets.astro";
+import ShieldCheckIcon from "~/components/ui/icons/ShieldCheck.astro";
+
+type WhyItem = {
+	icon: SvgComponent;
+	title: string;
+	description: string;
+};
+
+const items: WhyItem[] = [
+	{
+		icon: ShieldCheckIcon,
+		title: "Save the paint",
+		description:
+			"PPF helps protect your bike from chips, scratches, cable rub, heel rub, and transport wear before they become permanent marks.",
+	},
+	{
+		icon: BikeIcon,
+		title: "RideWrap is built for bikes",
+		description:
+			"RideWrap is designed for bicycles, with bike-focused coverage that generic film solutions do not match.",
+	},
+	{
+		icon: DropletsIcon,
+		title: "Easier cleaning",
+		description:
+			"Ceramic coating helps water and grime rinse off faster so washes take less time and your finish stays fresher.",
+	},
+	{
+		icon: ClockFadingIcon,
+		title: "A proper install takes time",
+		description:
+			"Prep, alignment, edge sealing, settling, and inspection add up. A professional install saves hours and wasted material.",
+	},
+];
+---
+
+<Section>
+	<p class="typography-headline-accent">Why protection matters</p>
+
+	<h2 class="typography-headline-primary text-center text-balance">
+		Keep your bike looking better for longer
+	</h2>
+
+	<p class="typography-headline-secondary text-center text-balance">
+		Good protection preserves paint, ceramic coating makes cleaning easier,
+		and we save you from wasting hours on a DIY installation.
+	</p>
+
+	{
+		items.map(({ icon: Icon, title, description }) => (
+			<Card class="md:flex-row md:items-center" size="medium">
+				<Icon class="text-accent-primary size-8 shrink-0" />
+				<div class="flex flex-col gap-2">
+					<h3 class="text-text-primary text-xl font-semibold">
+						{title}
+					</h3>
+					<p class="text-text-secondary">{description}</p>
+				</div>
+			</Card>
+		))
+	}
+</Section>
