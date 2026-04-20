@@ -410,7 +410,7 @@
               "name": "whyGrid",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 24,
+              "gap": 16,
               "children": [
                 {
                   "id": "xFTSw",
@@ -1819,7 +1819,7 @@
               "name": "faqList",
               "width": 960,
               "layout": "vertical",
-              "gap": 12,
+              "gap": 16,
               "children": [
                 {
                   "id": "GEsru",
@@ -4259,7 +4259,7 @@
               "name": "faqList",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 12,
+              "gap": 16,
               "children": [
                 {
                   "id": "mlguZ",
@@ -6629,7 +6629,7 @@
               "name": "faqList",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 12,
+              "gap": 16,
               "children": [
                 {
                   "id": "bKv8F",
