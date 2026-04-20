@@ -410,7 +410,7 @@
               "name": "whyGrid",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 16,
+              "gap": 24,
               "children": [
                 {
                   "id": "xFTSw",
@@ -447,7 +447,7 @@
                           "lineHeight": 1.15,
                           "fontFamily": "Inter",
                           "fontSize": 20,
-                          "fontWeight": "700"
+                          "fontWeight": "600"
                         },
                         {
                           "type": "text",
@@ -500,7 +500,7 @@
                           "lineHeight": 1.15,
                           "fontFamily": "Inter",
                           "fontSize": 20,
-                          "fontWeight": "700"
+                          "fontWeight": "600"
                         },
                         {
                           "type": "text",
@@ -553,7 +553,7 @@
                           "lineHeight": 1.15,
                           "fontFamily": "Inter",
                           "fontSize": 20,
-                          "fontWeight": "700"
+                          "fontWeight": "600"
                         },
                         {
                           "type": "text",
@@ -606,7 +606,7 @@
                           "lineHeight": 1.15,
                           "fontFamily": "Inter",
                           "fontSize": 20,
-                          "fontWeight": "700"
+                          "fontWeight": "600"
                         },
                         {
                           "type": "text",
