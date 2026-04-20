@@ -1,9 +1,8 @@
 ---
 import Header from "~/components/Header.astro";
+import HeroSection from "~/components/sections/Hero.astro";
 import ServicesSection from "~/components/sections/Services.astro";
 import WhyItMattersSection from "~/components/sections/WhyItMatters.astro";
-import Button from "~/components/ui/Button.astro";
-import Section from "~/components/ui/Section.astro";
 import "~/styles/global.css";
 ---
 
@@ -16,15 +15,7 @@ import "~/styles/global.css";
 	<body>
 		<Header />
 		<main>
-			<Section id="hero">
-				<p class="typography-headline-accent">
-					Certified RideWrap Installer
-				</p>
-				<h1 class="typography-headline-primary text-center">
-					Protect your bike<br />Ride without worry
-				</h1>
-				<Button class="w-fit">Get a quote</Button>
-			</Section>
+			<HeroSection />
 			<ServicesSection />
 			<WhyItMattersSection />
 		</main>
