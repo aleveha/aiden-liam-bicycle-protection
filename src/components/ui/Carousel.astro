@@ -16,11 +16,7 @@ type CarouselSlide = {
 };
 
 type Props = {
-	id?: string;
 	class?: string;
-	viewportClass?: string;
-	slideClass?: string;
-	imageClass?: string;
 	showArrows?: boolean;
 	showDots?: boolean;
 	options?: EmblaOptionsType;
@@ -34,11 +30,7 @@ type ProcessedSlide = CarouselSlide & {
 };
 
 const {
-	id,
 	class: className,
-	viewportClass,
-	slideClass,
-	imageClass,
 	showArrows = true,
 	showDots = true,
 	options = {},
@@ -85,99 +77,111 @@ const processedSlides: ProcessedSlide[] = await Promise.all(
 		};
 	}),
 );
+
+const isSingleSlide = processedSlides.length === 1;
 ---
 
-<div
-	aria-label="Image carousel"
-	aria-roledescription="carousel"
-	class={cn("relative", className)}
-	data-carousel
-	data-carousel-options={JSON.stringify(carouselOptions)}
-	id={id}
-	role="region"
->
-	<div
-		class={cn(
-			"h-full w-full overflow-hidden rounded-2xl lg:rounded-3xl",
-			viewportClass,
-		)}
-		data-carousel-viewport
-	>
+{
+	isSingleSlide ? (
 		<div
-			class="flex h-full touch-pan-y touch-pinch-zoom"
-			data-carousel-track
+			class={cn(
+				"h-full w-full overflow-hidden rounded-2xl lg:rounded-3xl",
+				className,
+			)}
 		>
-			{
-				processedSlides.map((slide, index) => (
-					<div
-						class={cn(
-							"relative min-w-0 shrink-0 grow-0 basis-full",
-							slideClass,
-						)}
-					>
-						<img
-							alt={slide.alt}
-							class={cn("h-full w-full object-cover", imageClass)}
-							decoding="async"
-							fetchpriority={index === 0 ? "high" : "auto"}
-							height={slide.height}
-							loading={index === 0 ? "eager" : "lazy"}
-							sizes={slide.resolvedSizes}
-							src={slide.optimizedSrc}
-							srcset={slide.optimizedSrcSet}
-							width={slide.width}
-						/>
-					</div>
-				))
-			}
+			<img
+				alt={processedSlides[0].alt}
+				class="h-full w-full object-cover"
+				decoding="async"
+				height={processedSlides[0].height}
+				sizes={processedSlides[0].resolvedSizes}
+				src={processedSlides[0].optimizedSrc}
+				srcset={processedSlides[0].optimizedSrcSet}
+				width={processedSlides[0].width}
+			/>
 		</div>
-	</div>
-
-	{
-		showArrows ? (
-			<>
-				<Button
-					aria-label="Previous slide"
-					class="absolute top-1/2 left-4 -translate-y-1/2"
-					data-carousel-prev
-					isIcon
+	) : (
+		<div
+			aria-label="Image carousel"
+			aria-roledescription="carousel"
+			class="relative"
+			data-carousel
+			data-carousel-options={JSON.stringify(carouselOptions)}
+			role="region"
+		>
+			<div
+				class={cn(
+					"h-full w-full overflow-hidden rounded-2xl lg:rounded-3xl",
+					className,
+				)}
+				data-carousel-viewport
+			>
+				<div
+					class="flex h-full touch-pan-y touch-pinch-zoom"
+					data-carousel-track
 				>
-					<ChevronLeftIcon class="size-6 -translate-x-0.25" />
-				</Button>
-				<Button
-					aria-label="Next slide"
-					class="absolute top-1/2 right-4 -translate-y-1/2"
-					data-carousel-next
-					isIcon
-				>
-					<ChevronRightIcon class="size-6 translate-x-0.25" />
-				</Button>
-			</>
-		) : null
-	}
-
-	{
-		showDots ? (
-			<div class="bg-overlay-light absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full px-2.5 py-1.5">
-				{processedSlides.map((_, index) => (
-					<button
-						aria-label={`Go to slide ${index + 1}`}
-						aria-current={index === 0 ? "true" : undefined}
-						class={cn(
-							"size-2 cursor-pointer rounded-full",
-							index === 0
-								? "bg-accent-primary"
-								: "bg-surface-base",
-						)}
-						data-carousel-dot
-						data-carousel-dot-index={index}
-						type="button"
-					/>
-				))}
+					{processedSlides.map((slide, index) => (
+						<div class="relative min-w-0 shrink-0 grow-0 basis-full">
+							<img
+								alt={slide.alt}
+								class="h-full w-full object-cover"
+								decoding="async"
+								fetchpriority={index === 0 ? "high" : "auto"}
+								height={slide.height}
+								loading={index === 0 ? "eager" : "lazy"}
+								sizes={slide.resolvedSizes}
+								src={slide.optimizedSrc}
+								srcset={slide.optimizedSrcSet}
+								width={slide.width}
+							/>
+						</div>
+					))}
+				</div>
 			</div>
-		) : null
-	}
-</div>
+
+			{showArrows ? (
+				<>
+					<Button
+						aria-label="Previous slide"
+						class="absolute top-1/2 left-4 -translate-y-1/2"
+						data-carousel-prev
+						isIcon
+					>
+						<ChevronLeftIcon class="size-6 -translate-x-0.25" />
+					</Button>
+					<Button
+						aria-label="Next slide"
+						class="absolute top-1/2 right-4 -translate-y-1/2"
+						data-carousel-next
+						isIcon
+					>
+						<ChevronRightIcon class="size-6 translate-x-0.25" />
+					</Button>
+				</>
+			) : null}
+
+			{showDots ? (
+				<div class="bg-overlay-light absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full px-2.5 py-1.5">
+					{processedSlides.map((_, index) => (
+						<button
+							aria-label={`Go to slide ${index + 1}`}
+							aria-current={index === 0 ? "true" : undefined}
+							class={cn(
+								"size-2 cursor-pointer rounded-full",
+								index === 0
+									? "bg-accent-primary"
+									: "bg-surface-base",
+							)}
+							data-carousel-dot
+							data-carousel-dot-index={index}
+							type="button"
+						/>
+					))}
+				</div>
+			) : null}
+		</div>
+	)
+}
 
 <script>
 	import EmblaCarousel from "embla-carousel";
