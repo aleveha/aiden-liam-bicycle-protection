@@ -5,21 +5,28 @@ type Props = {
 	class?: string;
 	disabled?: boolean;
 	href?: string;
+	isIcon?: boolean;
 	type?: "button" | "submit" | "reset";
 };
 
 const {
 	class: className,
+	disabled,
 	href,
+	isIcon,
 	type = "button",
 	...restProps
 } = Astro.props as Props & Record<string, unknown>;
 
 const classes = cn(
-	"inline-flex cursor-pointer items-center justify-center rounded-full",
-	"bg-accent-primary text-text-inverse text-center",
-	"px-8 py-3 text-sm font-bold md:px-9 md:py-3.5 md:text-base lg:px-10 lg:py-4",
-	"transition-colors duration-150 hover:brightness-95",
+	"inline-flex cursor-pointer items-center justify-center rounded-full text-center",
+	isIcon
+		? "bg-surface-base text-text-primary"
+		: "bg-accent-primary text-text-inverse",
+	isIcon
+		? "p-2"
+		: "px-8 py-3 text-sm font-bold md:px-9 md:py-3.5 md:text-base lg:px-10 lg:py-4",
+	"brightness-100 transition duration-200 hover:brightness-95",
 	"disabled:cursor-not-allowed disabled:opacity-60 aria-disabled:cursor-not-allowed aria-disabled:opacity-60",
 	className,
 );
@@ -30,18 +37,13 @@ const classes = cn(
 		<a
 			href={href}
 			class={classes}
-			aria-disabled={Astro.props.disabled ? "true" : undefined}
+			aria-disabled={disabled ? "true" : undefined}
 			{...restProps}
 		>
 			<slot />
 		</a>
 	) : (
-		<button
-			type={type}
-			class={classes}
-			disabled={Astro.props.disabled}
-			{...restProps}
-		>
+		<button type={type} class={classes} disabled={disabled} {...restProps}>
 			<slot />
 		</button>
 	)
