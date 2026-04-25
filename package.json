@@ -12,6 +12,8 @@
 	"dependencies": {
 		"astro": "^6.1.5",
 		"clsx": "^2.1.1",
+		"embla-carousel": "^8.6.0",
+		"sharp": "^0.34.5",
 		"tailwind-merge": "^3.5.0"
 	},
 	"devDependencies": {

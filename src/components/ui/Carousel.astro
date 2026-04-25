@@ -1,0 +1,246 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+import type { EmblaOptionsType } from "embla-carousel";
+import Button from "~/components/ui/Button.astro";
+import ChevronLeftIcon from "~/components/ui/icons/ChevronLeft.astro";
+import ChevronRightIcon from "~/components/ui/icons/ChevronRight.astro";
+import { cn } from "~/lib/cn";
+
+type CarouselSlide = {
+	alt: string;
+	height: number;
+	src: ImageMetadata | string;
+	width: number;
+	sizes?: string;
+};
+
+type Props = {
+	id?: string;
+	class?: string;
+	viewportClass?: string;
+	slideClass?: string;
+	imageClass?: string;
+	showArrows?: boolean;
+	showDots?: boolean;
+	options?: EmblaOptionsType;
+	slides: CarouselSlide[];
+};
+
+type ProcessedSlide = CarouselSlide & {
+	optimizedSrc: string;
+	optimizedSrcSet: string;
+	resolvedSizes: string;
+};
+
+const {
+	id,
+	class: className,
+	viewportClass,
+	slideClass,
+	imageClass,
+	showArrows = true,
+	showDots = true,
+	options = {},
+	slides,
+} = Astro.props as Props;
+
+const responsiveWidths = [640, 960, 1280];
+const defaultSizes = "(min-width: 1024px) 50vw, 100vw";
+const carouselOptions = {
+	align: "start",
+	loop: true,
+	...options,
+} satisfies EmblaOptionsType;
+
+const processedSlides: ProcessedSlide[] = await Promise.all(
+	slides.map(async (slide) => {
+		const variants = await Promise.all(
+			responsiveWidths.map((width) =>
+				getImage({
+					src: slide.src,
+					width,
+					height: Math.round((width * slide.height) / slide.width),
+					format: "webp",
+				}),
+			),
+		);
+
+		const fallback = await getImage({
+			src: slide.src,
+			width: 1280,
+			height: Math.round((1280 * slide.height) / slide.width),
+		});
+
+		return {
+			...slide,
+			optimizedSrc: fallback.src,
+			optimizedSrcSet: variants
+				.map(
+					(variant, index) =>
+						`${variant.src} ${responsiveWidths[index]}w`,
+				)
+				.join(", "),
+			resolvedSizes: slide.sizes ?? defaultSizes,
+		};
+	}),
+);
+---
+
+<div
+	aria-label="Image carousel"
+	aria-roledescription="carousel"
+	class={cn("relative", className)}
+	data-carousel
+	data-carousel-options={JSON.stringify(carouselOptions)}
+	id={id}
+	role="region"
+>
+	<div
+		class={cn(
+			"h-full w-full overflow-hidden rounded-2xl lg:rounded-3xl",
+			viewportClass,
+		)}
+		data-carousel-viewport
+	>
+		<div
+			class="flex h-full touch-pan-y touch-pinch-zoom"
+			data-carousel-track
+		>
+			{
+				processedSlides.map((slide, index) => (
+					<div
+						class={cn(
+							"relative min-w-0 shrink-0 grow-0 basis-full",
+							slideClass,
+						)}
+					>
+						<img
+							alt={slide.alt}
+							class={cn("h-full w-full object-cover", imageClass)}
+							decoding="async"
+							fetchpriority={index === 0 ? "high" : "auto"}
+							height={slide.height}
+							loading={index === 0 ? "eager" : "lazy"}
+							sizes={slide.resolvedSizes}
+							src={slide.optimizedSrc}
+							srcset={slide.optimizedSrcSet}
+							width={slide.width}
+						/>
+					</div>
+				))
+			}
+		</div>
+	</div>
+
+	{
+		showArrows ? (
+			<>
+				<Button
+					aria-label="Previous slide"
+					class="absolute top-1/2 left-4 -translate-y-1/2"
+					data-carousel-prev
+					isIcon
+				>
+					<ChevronLeftIcon class="size-6 -translate-x-0.25" />
+				</Button>
+				<Button
+					aria-label="Next slide"
+					class="absolute top-1/2 right-4 -translate-y-1/2"
+					data-carousel-next
+					isIcon
+				>
+					<ChevronRightIcon class="size-6 translate-x-0.25" />
+				</Button>
+			</>
+		) : null
+	}
+
+	{
+		showDots ? (
+			<div class="bg-overlay-light absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full px-2.5 py-1.5">
+				{processedSlides.map((_, index) => (
+					<button
+						aria-label={`Go to slide ${index + 1}`}
+						aria-current={index === 0 ? "true" : undefined}
+						class={cn(
+							"size-2 cursor-pointer rounded-full",
+							index === 0
+								? "bg-accent-primary"
+								: "bg-surface-base",
+						)}
+						data-carousel-dot
+						data-carousel-dot-index={index}
+						type="button"
+					/>
+				))}
+			</div>
+		) : null
+	}
+</div>
+
+<script>
+	import EmblaCarousel from "embla-carousel";
+
+	document
+		.querySelectorAll<HTMLElement>("[data-carousel]")
+		.forEach((root) => {
+			const viewport = root.querySelector<HTMLElement>(
+				"[data-carousel-viewport]",
+			);
+			const previousButton = root.querySelector<HTMLButtonElement>(
+				"[data-carousel-prev]",
+			);
+			const nextButton = root.querySelector<HTMLButtonElement>(
+				"[data-carousel-next]",
+			);
+			const dots = root.querySelectorAll<HTMLButtonElement>(
+				"[data-carousel-dot]",
+			);
+			const optionsString = root.getAttribute("data-carousel-options");
+
+			if (!viewport || root.dataset.emblaInitialized === "true") {
+				return;
+			}
+
+			root.dataset.emblaInitialized = "true";
+
+			const embla = EmblaCarousel(
+				viewport,
+				optionsString ? JSON.parse(optionsString) : {},
+			);
+
+			const activateDots = (selectedIndex: number) => {
+				dots.forEach((dot, dotIndex) => {
+					const isSelected = dotIndex === selectedIndex;
+					dot.setAttribute(
+						"aria-current",
+						isSelected ? "true" : "false",
+					);
+					dot.classList.toggle("bg-accent-primary", isSelected);
+					dot.classList.toggle("bg-surface-base", !isSelected);
+				});
+			};
+
+			const handleSelectionChange = () => {
+				const selectedIndex = embla.selectedScrollSnap();
+				activateDots(selectedIndex);
+			};
+
+			previousButton?.addEventListener("click", () => embla.scrollPrev());
+			nextButton?.addEventListener("click", () => embla.scrollNext());
+
+			dots.forEach((dot) => {
+				dot.addEventListener("click", () => {
+					const dotIndex = Number(
+						dot.getAttribute("data-carousel-dot-index"),
+					);
+					embla.scrollTo(dotIndex);
+				});
+			});
+
+			embla.on("select", handleSelectionChange);
+			embla.on("reInit", handleSelectionChange);
+			handleSelectionChange();
+		});
+</script>
