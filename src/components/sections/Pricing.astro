@@ -1,0 +1,130 @@
+---
+import Card from "~/components/ui/Card.astro";
+import Section from "~/components/ui/Section.astro";
+
+type PricingRow = {
+	title: string;
+	description: string;
+	price: string;
+};
+
+type PricingBlock = {
+	title: string;
+	description: string;
+	rows: PricingRow[];
+	note?: string;
+};
+
+const blocks: PricingBlock[] = [
+	{
+		title: "Paint protection film",
+		description:
+			"Gloss or matte clear film - absorbs chips and rub - keeps paint looking newer longer",
+		rows: [
+			{
+				title: "Road / gravel frameset",
+				description: "Full-frameset RideWrap-style protection",
+				price: "From $579",
+			},
+			{
+				title: "MTB frame",
+				description: "More coverage area than road / gravel",
+				price: "From $499",
+			},
+			{
+				title: "Fork",
+				description: "Crown, legs, arch - per bike",
+				price: "From $149",
+			},
+			{
+				title: "Wheelset",
+				description: "Rims - both wheels",
+				price: "From $249",
+			},
+			{
+				title: "Cranks",
+				description: "Arms high-wear areas",
+				price: "From $49",
+			},
+		],
+		note: "Ceramic coating for the same area is complimentary when you book the matching PPF service above.",
+	},
+	{
+		title: "Ceramic coating",
+		description:
+			"Hydrophobic top layer - easier washes - helps protect gloss",
+		rows: [
+			{
+				title: "Frameset",
+				description: "Frame, fork & cockpit zones - full-bike ceramic",
+				price: "From $199",
+			},
+			{
+				title: "Wheels",
+				description: "Rims & spokes - both wheels",
+				price: "From $99",
+			},
+			{
+				title: "Cranks",
+				description: "Arms and spider",
+				price: "From $49",
+			},
+		],
+	},
+];
+---
+
+<Section id="pricing">
+	<p class="typography-headline-accent">Pricing</p>
+
+	<h2 class="typography-headline-primary">Clear starting points.</h2>
+
+	<p class="typography-headline-secondary">
+		Pricing depends on your frame, fork, wheels, and coverage. Message us
+		for a quote tailored to your bike.
+	</p>
+
+	<div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+		{
+			blocks.map((block) => (
+				<Card size="large">
+					<h3 class="text-text-primary text-xl font-bold sm:text-2xl">
+						{block.title}
+					</h3>
+
+					<p class="text-text-secondary text-sm">
+						{block.description}
+					</p>
+
+					<div class="flex flex-col gap-2.5">
+						{block.rows.map((row) => (
+							<Card
+								class="lg:flex-row lg:items-center lg:justify-between"
+								size="small"
+							>
+								<div class="flex flex-col gap-1">
+									<p class="text-text-primary text-lg font-semibold">
+										{row.title}
+									</p>
+									<p class="text-text-secondary text-sm">
+										{row.description}
+									</p>
+								</div>
+
+								<p class="text-accent-primary font-bold whitespace-nowrap">
+									{row.price}
+								</p>
+							</Card>
+						))}
+					</div>
+
+					{block.note ? (
+						<p class="text-text-secondary text-xs font-medium">
+							{block.note}
+						</p>
+					) : null}
+				</Card>
+			))
+		}
+	</div>
+</Section>
