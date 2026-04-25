@@ -1,0 +1,71 @@
+---
+import Button from "~/components/ui/Button.astro";
+import Card from "~/components/ui/Card.astro";
+import Section from "~/components/ui/Section.astro";
+
+type LocationItem = {
+	title: string;
+	region: string;
+	description: string;
+	buttonLabel: string;
+};
+
+const items: LocationItem[] = [
+	{
+		title: "Richmond Hill",
+		region: "Ontario, Canada",
+		description:
+			"Convenient for York Region riders and fast GTA drop-offs.",
+		buttonLabel: "Book Richmond Hill",
+	},
+	{
+		title: "Innisfil",
+		region: "Ontario, Canada",
+		description:
+			"Great option for Simcoe-area riders and nearby pickup requests.",
+		buttonLabel: "Book Innisfil",
+	},
+];
+---
+
+<Section id="locations">
+	<p class="typography-headline-accent">Locations</p>
+
+	<h2 class="typography-headline-primary">
+		Two convenient locations for GTA and Simcoe riders
+	</h2>
+
+	<p class="typography-headline-secondary">
+		Pickup available across Toronto, North York, Vaughan, Markham, Richmond
+		Hill, Aurora, and Barrie.
+	</p>
+
+	<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
+		{
+			items.map(({ title, region, description, buttonLabel }) => (
+				<Card
+					class="aspect-4/3 min-h-90 justify-between bg-[#1a1d21]"
+					noBorder
+					size="large"
+					transparent
+				>
+					<div class="flex flex-col gap-3">
+						<h3 class="text-text-inverse text-2xl font-bold md:text-3xl lg:text-4xl">
+							{title}
+						</h3>
+						<p class="text-text-inverse text-base font-medium">
+							{region}
+						</p>
+						<p class="text-text-inverse text-sm md:text-base">
+							{description}
+						</p>
+					</div>
+
+					<Button class="w-fit" href="#contact">
+						{buttonLabel}
+					</Button>
+				</Card>
+			))
+		}
+	</div>
+</Section>
