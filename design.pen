@@ -704,7 +704,7 @@
                           "id": "ZUAQp",
                           "width": 32,
                           "height": 32,
-                          "iconFontName": "message-square",
+                          "iconFontName": "messages-square",
                           "iconFontFamily": "lucide",
                           "fill": "$color.accent.primary"
                         },
@@ -3080,7 +3080,7 @@
                           "id": "7tFFG",
                           "width": 32,
                           "height": 32,
-                          "iconFontName": "message-square",
+                          "iconFontName": "messages-square",
                           "iconFontFamily": "lucide",
                           "fill": "$color.accent.primary"
                         },
@@ -5450,7 +5450,7 @@
                           "id": "1eRwD",
                           "width": 32,
                           "height": 32,
-                          "iconFontName": "message-square",
+                          "iconFontName": "messages-square",
                           "iconFontFamily": "lucide",
                           "fill": "$color.accent.primary"
                         },
