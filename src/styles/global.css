@@ -11,6 +11,18 @@
 	--color-text-secondary: #4d4d4d;
 }
 
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+}
+
 @layer components {
 	.layout-section {
 		@apply flex w-full flex-col gap-4 px-5 py-8 md:gap-5 md:px-8 md:py-10 lg:gap-6 lg:px-10 lg:py-12;
