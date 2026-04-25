@@ -130,7 +130,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "./assets/hero2.jpg",
+              "url": "assets/hero2.jpg",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -255,7 +255,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/ppf.jpg",
+                      "url": "assets/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -310,7 +310,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/ceramic-coating.jpg",
+                      "url": "assets/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -858,7 +858,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "./assets/ppf.jpg",
+                    "url": "assets/ppf.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 24,
@@ -1604,7 +1604,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/richmond-hill.webp",
+                      "url": "assets/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -1690,7 +1690,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/innisfil.webp",
+                      "url": "assets/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2484,7 +2484,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "./assets/hero2.jpg",
+              "url": "assets/hero2.jpg",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -2585,7 +2585,7 @@
               "x": 20,
               "y": 70,
               "fill": "$color.text.primary",
-              "fontSize": 24,
+              "fontSize": 30,
               "textAlign": "center"
             },
             {
@@ -2598,7 +2598,7 @@
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "x": 20,
-              "y": 138,
+              "y": 185,
               "fontSize": 16
             },
             {
@@ -2621,7 +2621,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/ppf.jpg",
+                      "url": "assets/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2677,7 +2677,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/ceramic-coating.jpg",
+                      "url": "assets/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2760,7 +2760,7 @@
               "width": "fill_container",
               "x": 20,
               "y": 70,
-              "fontSize": 24,
+              "fontSize": 30,
               "textAlign": "center"
             },
             {
@@ -2773,7 +2773,7 @@
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "x": 20,
-              "y": 138,
+              "y": 152,
               "fontSize": 16
             },
             {
@@ -3034,7 +3034,7 @@
               "width": "fill_container",
               "x": 20,
               "y": 70,
-              "fontSize": 24,
+              "fontSize": 30,
               "textAlign": "center"
             },
             {
@@ -3049,7 +3049,7 @@
               "fontSize": 16,
               "lineHeight": 1.45,
               "x": 20,
-              "y": 138
+              "y": 152
             },
             {
               "type": "frame",
@@ -3234,7 +3234,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "./assets/ppf.jpg",
+                    "url": "assets/ppf.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 16,
@@ -3377,7 +3377,7 @@
               "width": "fill_container",
               "x": 20,
               "y": 70,
-              "fontSize": 24,
+              "fontSize": 30,
               "textAlign": "center"
             },
             {
@@ -3390,7 +3390,7 @@
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "x": 20,
-              "y": 112,
+              "y": 119,
               "fontSize": 16
             },
             {
@@ -4009,7 +4009,7 @@
               "x": 20,
               "y": 70,
               "height": 0,
-              "fontSize": 24,
+              "fontSize": 30,
               "textAlign": "center"
             },
             {
@@ -4019,7 +4019,7 @@
               "name": "locSub",
               "content": "Pickup available across Toronto, North York, Vaughan, Markham, Richmond Hill, Aurora, and Barrie.",
               "x": 20,
-              "y": 138,
+              "y": 185,
               "fontSize": 16,
               "width": "fill_container",
               "textGrowth": "fixed-width",
@@ -4044,7 +4044,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/richmond-hill.webp",
+                      "url": "assets/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -4127,7 +4127,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/innisfil.webp",
+                      "url": "assets/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -4236,7 +4236,7 @@
               "textGrowth": "fixed-width",
               "x": 20,
               "y": 70,
-              "fontSize": 24,
+              "fontSize": 30,
               "width": "fill_container",
               "textAlign": "center"
             },
@@ -4250,7 +4250,7 @@
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "x": 20,
-              "y": 138,
+              "y": 152,
               "fontSize": 16
             },
             {
@@ -4853,7 +4853,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "./assets/hero2.jpg",
+              "url": "assets/hero2.jpg",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -4986,7 +4986,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/ppf.jpg",
+                      "url": "assets/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -5042,7 +5042,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/ceramic-coating.jpg",
+                      "url": "assets/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -5606,7 +5606,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "./assets/ppf.jpg",
+                    "url": "assets/ppf.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 16,
@@ -6414,7 +6414,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/richmond-hill.webp",
+                      "url": "assets/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -6497,7 +6497,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "./assets/innisfil.webp",
+                      "url": "assets/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
