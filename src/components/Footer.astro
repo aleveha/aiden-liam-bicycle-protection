@@ -1,0 +1,39 @@
+---
+import FacebookIcon from "~/components/ui/icons/Facebook.astro";
+import InstagramIcon from "~/components/ui/icons/Instagram.astro";
+import Link from "~/components/ui/Link.astro";
+---
+
+<footer class="border-border-primary w-full border-t">
+	<div
+		class="mx-auto flex w-full max-w-360 items-center justify-between gap-4 px-5 py-3 md:px-8 md:py-4 lg:px-20 lg:py-5"
+	>
+		<p
+			class="text-text-primary text-sm font-medium md:text-base lg:text-lg"
+		>
+			Aiden Liam Bicycle Protection
+		</p>
+
+		<div class="flex items-center gap-2 lg:gap-5">
+			<Link
+				aria-label="Instagram"
+				class="text-text-secondary p-1"
+				href="https://www.instagram.com/aidenliamframeprotection"
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<InstagramIcon class="size-4 sm:size-5" />
+			</Link>
+
+			<Link
+				aria-label="Facebook"
+				class="text-text-secondary p-1"
+				href="https://www.facebook.com/aidenliamframeprotectioninstalls"
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<FacebookIcon class="size-4 sm:size-5" />
+			</Link>
+		</div>
+	</div>
+</footer>
