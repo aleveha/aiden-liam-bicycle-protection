@@ -27,4 +27,8 @@
 	.typography-headline-secondary {
 		@apply text-text-secondary text-base font-normal md:text-lg lg:text-xl text-center text-balance;
 	}
+
+	.typography-hero {
+		@apply text-text-primary text-center text-balance text-4xl font-bold md:text-5xl lg:text-6xl;
+	}
 }
