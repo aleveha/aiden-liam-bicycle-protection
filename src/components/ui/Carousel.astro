@@ -1,17 +1,16 @@
 ---
 import type { ImageMetadata } from "astro";
-import { getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import type { EmblaOptionsType } from "embla-carousel";
 import Button from "~/components/ui/Button.astro";
 import ChevronLeftIcon from "~/components/ui/icons/ChevronLeft.astro";
 import ChevronRightIcon from "~/components/ui/icons/ChevronRight.astro";
 import { cn } from "~/lib/cn";
+import { HALF_VIEWPORT_IMAGE_SIZES } from "~/lib/image";
 
 type CarouselSlide = {
 	alt: string;
-	height: number;
-	src: ImageMetadata | string;
-	width: number;
+	src: ImageMetadata;
 	sizes?: string;
 };
 
@@ -23,12 +22,6 @@ type Props = {
 	slides: CarouselSlide[];
 };
 
-type ProcessedSlide = CarouselSlide & {
-	optimizedSrc: string;
-	optimizedSrcSet: string;
-	resolvedSizes: string;
-};
-
 const {
 	class: className,
 	showArrows = true,
@@ -37,48 +30,15 @@ const {
 	slides,
 } = Astro.props as Props;
 
-const responsiveWidths = [640, 960, 1280];
-const defaultSizes = "(min-width: 1024px) 50vw, 100vw";
 const carouselOptions = {
 	align: "start",
 	loop: true,
 	...options,
 } satisfies EmblaOptionsType;
 
-const processedSlides: ProcessedSlide[] = await Promise.all(
-	slides.map(async (slide) => {
-		const variants = await Promise.all(
-			responsiveWidths.map((width) =>
-				getImage({
-					src: slide.src,
-					width,
-					height: Math.round((width * slide.height) / slide.width),
-					format: "webp",
-				}),
-			),
-		);
+const imageWidths = [480, 768, 1024];
 
-		const fallback = await getImage({
-			src: slide.src,
-			width: 1280,
-			height: Math.round((1280 * slide.height) / slide.width),
-		});
-
-		return {
-			...slide,
-			optimizedSrc: fallback.src,
-			optimizedSrcSet: variants
-				.map(
-					(variant, index) =>
-						`${variant.src} ${responsiveWidths[index]}w`,
-				)
-				.join(", "),
-			resolvedSizes: slide.sizes ?? defaultSizes,
-		};
-	}),
-);
-
-const isSingleSlide = processedSlides.length === 1;
+const isSingleSlide = slides.length === 1;
 ---
 
 {
@@ -89,15 +49,15 @@ const isSingleSlide = processedSlides.length === 1;
 				className,
 			)}
 		>
-			<img
-				alt={processedSlides[0].alt}
+			<Image
+				alt={slides[0].alt}
 				class="h-full w-full object-cover"
 				decoding="async"
-				height={processedSlides[0].height}
-				sizes={processedSlides[0].resolvedSizes}
-				src={processedSlides[0].optimizedSrc}
-				srcset={processedSlides[0].optimizedSrcSet}
-				width={processedSlides[0].width}
+				format="webp"
+				loading="lazy"
+				sizes={slides[0].sizes ?? HALF_VIEWPORT_IMAGE_SIZES}
+				src={slides[0].src}
+				widths={imageWidths}
 			/>
 		</div>
 	) : (
@@ -120,19 +80,17 @@ const isSingleSlide = processedSlides.length === 1;
 					class="flex h-full touch-pan-y touch-pinch-zoom"
 					data-carousel-track
 				>
-					{processedSlides.map((slide, index) => (
+					{slides.map((slide, index) => (
 						<div class="relative min-w-0 shrink-0 grow-0 basis-full">
-							<img
+							<Image
 								alt={slide.alt}
 								class="h-full w-full object-cover"
 								decoding="async"
-								fetchpriority={index === 0 ? "high" : "auto"}
-								height={slide.height}
-								loading={index === 0 ? "eager" : "lazy"}
-								sizes={slide.resolvedSizes}
-								src={slide.optimizedSrc}
-								srcset={slide.optimizedSrcSet}
-								width={slide.width}
+								format="webp"
+								loading="lazy"
+								sizes={slide.sizes ?? HALF_VIEWPORT_IMAGE_SIZES}
+								src={slide.src}
+								widths={imageWidths}
 							/>
 						</div>
 					))}
@@ -162,7 +120,7 @@ const isSingleSlide = processedSlides.length === 1;
 
 			{showDots ? (
 				<div class="bg-overlay-light absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full px-2.5 py-1.5">
-					{processedSlides.map((_, index) => (
+					{slides.map((_, index) => (
 						<button
 							aria-label={`Go to slide ${index + 1}`}
 							aria-current={index === 0 ? "true" : undefined}
