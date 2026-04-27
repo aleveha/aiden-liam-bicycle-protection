@@ -1,13 +1,22 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Picture } from "astro:assets";
+import InnisfilLocationMapImage from "~/assets/innisfil.webp";
+import RichmondHillLocationMapImage from "~/assets/richmond-hill.webp";
 import Button from "~/components/ui/Button.astro";
 import Card from "~/components/ui/Card.astro";
 import Section from "~/components/ui/Section.astro";
+import {
+	HALF_VIEWPORT_IMAGE_SIZES,
+	RESPONSIVE_IMAGE_WIDTHS,
+} from "~/lib/image";
 
 type LocationItem = {
 	title: string;
 	region: string;
 	description: string;
 	buttonLabel: string;
+	image: ImageMetadata;
 };
 
 const items: LocationItem[] = [
@@ -17,6 +26,7 @@ const items: LocationItem[] = [
 		description:
 			"Convenient for York Region riders and fast GTA drop-offs.",
 		buttonLabel: "Book Richmond Hill",
+		image: RichmondHillLocationMapImage,
 	},
 	{
 		title: "Innisfil",
@@ -24,6 +34,7 @@ const items: LocationItem[] = [
 		description:
 			"Great option for Simcoe-area riders and nearby pickup requests.",
 		buttonLabel: "Book Innisfil",
+		image: InnisfilLocationMapImage,
 	},
 ];
 ---
@@ -42,28 +53,39 @@ const items: LocationItem[] = [
 
 	<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
 		{
-			items.map(({ title, region, description, buttonLabel }) => (
+			items.map(({ title, region, description, buttonLabel, image }) => (
 				<Card
-					class="aspect-4/3 min-h-90 justify-between bg-[#1a1d21]"
+					class="text-text-inverse relative aspect-4/3 min-h-90 justify-between overflow-hidden"
 					noBorder
 					size="large"
 					transparent
 				>
 					<div class="flex flex-col gap-3">
-						<h3 class="text-text-inverse text-2xl font-bold md:text-3xl lg:text-4xl">
+						<h3 class="text-2xl font-bold md:text-3xl lg:text-4xl">
 							{title}
 						</h3>
-						<p class="text-text-inverse text-base font-medium">
-							{region}
-						</p>
-						<p class="text-text-inverse text-sm md:text-base">
-							{description}
-						</p>
+						<p class="font-semibold">{region}</p>
+						<p class="text-sm md:text-base">{description}</p>
 					</div>
 
 					<Button class="w-fit" href="#contact">
 						{buttonLabel}
 					</Button>
+
+					<Picture
+						alt=""
+						class="h-full w-full object-cover brightness-70"
+						decoding="async"
+						fallbackFormat="jpeg"
+						formats={["avif", "webp"]}
+						loading="lazy"
+						pictureAttributes={{
+							class: "absolute inset-0 -z-1 block h-full w-full",
+						}}
+						sizes={HALF_VIEWPORT_IMAGE_SIZES}
+						src={image}
+						widths={RESPONSIVE_IMAGE_WIDTHS}
+					/>
 				</Card>
 			))
 		}
