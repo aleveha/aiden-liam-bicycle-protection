@@ -1,10 +1,16 @@
 ---
+import { Picture } from "astro:assets";
+import HeroImage from "~/assets/hero.webp";
 import Button from "~/components/ui/Button.astro";
 import Section from "~/components/ui/Section.astro";
+import {
+	FULL_VIEWPORT_IMAGE_SIZES,
+	RESPONSIVE_IMAGE_WIDTHS,
+} from "~/lib/image";
 ---
 
 <Section
-	class="mx-0 aspect-2/3 max-h-240 max-w-none items-center justify-center bg-[#1a1d21] sm:aspect-video"
+	class="relative mx-0 aspect-2/3 max-h-240 max-w-none items-center justify-center overflow-hidden sm:aspect-video"
 >
 	<p class="typography-headline-accent">Certified RideWrap Installer</p>
 
@@ -13,4 +19,17 @@ import Section from "~/components/ui/Section.astro";
 	</h1>
 
 	<Button class="mt-2 w-fit" href="#contact">Get a quote</Button>
+
+	<Picture
+		alt=""
+		class="h-full w-full object-cover object-left brightness-60 sm:object-center"
+		formats={["avif", "webp"]}
+		loading="eager"
+		pictureAttributes={{
+			class: "absolute inset-0 block h-full w-full -z-1",
+		}}
+		sizes={FULL_VIEWPORT_IMAGE_SIZES}
+		src={HeroImage}
+		widths={RESPONSIVE_IMAGE_WIDTHS}
+	/>
 </Section>
