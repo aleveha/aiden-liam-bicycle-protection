@@ -130,7 +130,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "assets/hero2.jpg",
+              "url": "src/assets/hero.webp",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -255,7 +255,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/ppf.jpg",
+                      "url": "src/assets/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -310,7 +310,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/ceramic-coating.jpg",
+                      "url": "src/assets/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -858,7 +858,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "assets/ppf.jpg",
+                    "url": "src/assets/ppf.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 24,
@@ -1604,7 +1604,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/richmond-hill.webp",
+                      "url": "src/assets/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -1690,7 +1690,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/innisfil.webp",
+                      "url": "src/assets/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2484,7 +2484,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "assets/hero2.jpg",
+              "url": "src/assets/hero.webp",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -2621,7 +2621,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/ppf.jpg",
+                      "url": "src/assets/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2677,7 +2677,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/ceramic-coating.jpg",
+                      "url": "src/assets/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -3234,7 +3234,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "assets/ppf.jpg",
+                    "url": "src/assets/ppf.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 16,
@@ -4044,7 +4044,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/richmond-hill.webp",
+                      "url": "src/assets/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -4127,7 +4127,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/innisfil.webp",
+                      "url": "src/assets/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -4853,7 +4853,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "assets/hero2.jpg",
+              "url": "src/assets/hero.webp",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -4986,7 +4986,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/ppf.jpg",
+                      "url": "src/assets/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -5042,7 +5042,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/ceramic-coating.jpg",
+                      "url": "src/assets/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -5606,7 +5606,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "assets/ppf.jpg",
+                    "url": "src/assets/ppf.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 16,
@@ -6414,7 +6414,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/richmond-hill.webp",
+                      "url": "src/assets/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -6497,7 +6497,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "assets/innisfil.webp",
+                      "url": "src/assets/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
