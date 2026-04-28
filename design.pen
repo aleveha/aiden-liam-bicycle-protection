@@ -1771,6 +1771,302 @@
         },
         {
           "type": "frame",
+          "id": "Yce1n",
+          "name": "Contact",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            56,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "hx8I7",
+              "type": "ref",
+              "ref": "x2UNU",
+              "name": "badgeD",
+              "content": "Contact"
+            },
+            {
+              "id": "8dkOK",
+              "type": "ref",
+              "ref": "ZDfDw",
+              "name": "titleD",
+              "content": "Reach out for quotes and scheduling"
+            },
+            {
+              "id": "bxsO1",
+              "type": "ref",
+              "ref": "2ntrK",
+              "textAlign": "center",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "name": "subD",
+              "content": "Coverage, timing, or quotes – reach out on any channel below. We respond with next steps and booking details."
+            },
+            {
+              "type": "frame",
+              "id": "AW00t",
+              "name": "rowD",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kQzMa",
+                  "name": "waD",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "l20OT",
+                      "name": "waIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "phone",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JFvsc",
+                      "name": "waCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mFha4",
+                          "name": "waTitle",
+                          "fill": "$color.text.primary",
+                          "content": "WhatsApp",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TtEyk",
+                          "name": "waTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "+1 (437) 555-0142",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "P5Clc",
+                  "name": "emD",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "FAxN7",
+                      "name": "emIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "mail",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4Gb8t",
+                      "name": "emCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sxnbS",
+                          "name": "emTitle",
+                          "fill": "$color.text.primary",
+                          "content": "Email",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "N6AIq",
+                          "name": "emTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "contact@your-domain.ca",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CGlVz",
+                  "name": "igD",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "ZzYrA",
+                      "name": "igIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "instagram",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OAVsl",
+                      "name": "igCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "T6Jxx",
+                          "name": "igTitle",
+                          "fill": "$color.text.primary",
+                          "content": "Instagram",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8TmUd",
+                          "name": "igTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "@aidenliamframeprotection",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "7nXBG",
+                  "name": "fbD",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "7zaeX",
+                      "name": "fbIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "facebook",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lkzoc",
+                      "name": "fbCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TPjcX",
+                          "name": "fbTitle",
+                          "fill": "$color.text.primary",
+                          "content": "Facebook",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gKHQO",
+                          "name": "fbTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "@aidenliamframeprotectioninstalls",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
           "id": "Lo0UG",
           "name": "FAQ",
           "width": "fill_container",
@@ -4205,6 +4501,310 @@
         },
         {
           "type": "frame",
+          "id": "L79qk",
+          "name": "Contact",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "KlSTy",
+              "type": "ref",
+              "ref": "x2UNU",
+              "textAlign": "center",
+              "name": "badgeM",
+              "content": "Contact",
+              "fontSize": 18
+            },
+            {
+              "id": "afTgR",
+              "type": "ref",
+              "ref": "ZDfDw",
+              "textAlign": "center",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "name": "titleM",
+              "content": "Reach out for quotes and scheduling",
+              "fontSize": 30
+            },
+            {
+              "id": "mmgrX",
+              "type": "ref",
+              "ref": "2ntrK",
+              "textAlign": "center",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "name": "subM",
+              "content": "Reach out below – we reply with quotes and booking details.",
+              "fontSize": 16
+            },
+            {
+              "type": "frame",
+              "id": "3RqrO",
+              "name": "colM",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MNhy4",
+                  "name": "contactWa",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "doJo0",
+                      "name": "waIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "phone",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZSoT6",
+                      "name": "waCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "46mNN",
+                          "name": "waTitle",
+                          "fill": "$color.text.primary",
+                          "content": "WhatsApp",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "whtck",
+                          "name": "waTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "+1 (437) 555-0142",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9OVAM",
+                  "name": "contactIg",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "V2ySw",
+                      "name": "igIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "instagram",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "agIOU",
+                      "name": "igCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LfKWT",
+                          "name": "igTitle",
+                          "fill": "$color.text.primary",
+                          "content": "Instagram",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3hkdB",
+                          "name": "igTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "@aidenliamframeprotection",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8GCuo",
+                  "name": "contactFb",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "2C1Wu",
+                      "name": "fbIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "facebook",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SfFyn",
+                      "name": "fbCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xOB7S",
+                          "name": "fbTitle",
+                          "fill": "$color.text.primary",
+                          "content": "Facebook",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "1QX5B",
+                          "name": "fbTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "@aidenliamframeprotectioninstalls",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4q7RQ",
+                  "name": "contactEm",
+                  "width": "fill_container",
+                  "fill": "$color.surface.base",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$color.border.primary"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Nfij3",
+                      "name": "emIc",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "mail",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.accent.primary"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DZVyU",
+                      "name": "emCol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "e7nn5",
+                          "name": "emTitle",
+                          "fill": "$color.text.primary",
+                          "content": "Email",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "s1hqf",
+                          "name": "emTag",
+                          "fill": "$color.text.primary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "contact@your-domain.ca",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
           "id": "eibTI",
           "name": "FAQ",
           "width": "fill_container",
@@ -6566,6 +7166,327 @@
                           "y": 14
                         }
                       }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FdrBs",
+          "name": "Contact",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            40,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "qLlC7",
+              "type": "ref",
+              "ref": "x2UNU",
+              "textAlign": "center",
+              "name": "badgeT",
+              "content": "Contact",
+              "fontSize": 20
+            },
+            {
+              "id": "p3nF1",
+              "type": "ref",
+              "ref": "ZDfDw",
+              "textAlign": "center",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "name": "titleT",
+              "content": "Reach out for quotes and scheduling",
+              "fontSize": 36
+            },
+            {
+              "id": "60sbn",
+              "type": "ref",
+              "ref": "2ntrK",
+              "textAlign": "center",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "name": "subT",
+              "content": "Coverage, timing, or quotes – reach out on any channel below. We respond with next steps and booking details."
+            },
+            {
+              "type": "frame",
+              "id": "qxqNu",
+              "name": "colT",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gjhRQ",
+                  "name": "contactGridTop",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "denXl",
+                      "name": "waT",
+                      "width": "fill_container",
+                      "fill": "$color.surface.base",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color.border.primary"
+                      },
+                      "gap": 12,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "Qgjjb",
+                          "name": "waIc",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "phone",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color.accent.primary"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "v8Q43",
+                          "name": "waCol",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "chxnu",
+                              "name": "waTitle",
+                              "fill": "$color.text.primary",
+                              "content": "WhatsApp",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "LerZn",
+                              "name": "waTag",
+                              "fill": "$color.text.primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "+1 (437) 555-0142",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6H0jz",
+                      "name": "emT",
+                      "width": "fill_container",
+                      "fill": "$color.surface.base",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color.border.primary"
+                      },
+                      "gap": 12,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "omx0N",
+                          "name": "emIc",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "mail",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color.accent.primary"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "na7QF",
+                          "name": "emCol",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "viu09",
+                              "name": "emTitle",
+                              "fill": "$color.text.primary",
+                              "content": "Email",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "cIHKE",
+                              "name": "emTag",
+                              "fill": "$color.text.primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "contact@your-domain.ca",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NK3SA",
+                  "name": "contactGridBot",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YbdOv",
+                      "name": "igT",
+                      "width": "fill_container",
+                      "fill": "$color.surface.base",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color.border.primary"
+                      },
+                      "gap": 12,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "676gC",
+                          "name": "igIc",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "instagram",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color.accent.primary"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Xn0Un",
+                          "name": "igCol",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "1oaTo",
+                              "name": "igTitle",
+                              "fill": "$color.text.primary",
+                              "content": "Instagram",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "xhdEE",
+                              "name": "igTag",
+                              "fill": "$color.text.primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "@aidenliamframeprotection",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z9nUp",
+                      "name": "fbT",
+                      "width": "fill_container",
+                      "fill": "$color.surface.base",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$color.border.primary"
+                      },
+                      "gap": 12,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "BEX2d",
+                          "name": "fbIc",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "facebook",
+                          "iconFontFamily": "lucide",
+                          "fill": "$color.accent.primary"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qEE6G",
+                          "name": "fbCol",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "27Phy",
+                              "name": "fbTitle",
+                              "fill": "$color.text.primary",
+                              "content": "Facebook",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "HaHvo",
+                              "name": "fbTag",
+                              "fill": "$color.text.primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "@aidenliamframeprotectioninstalls",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
