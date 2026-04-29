@@ -4,34 +4,47 @@ import { cn } from "~/lib/cn";
 
 type CardSize = "small" | "medium" | "large";
 
-type Props = HTMLAttributes<"article"> & {
+type CardAs = "article" | "div" | "a" | "button";
+
+type CardHTMLProps = HTMLAttributes<"a"> &
+	HTMLAttributes<"button"> &
+	HTMLAttributes<"div"> &
+	HTMLAttributes<"article">;
+
+type Props = CardHTMLProps & {
+	as?: CardAs;
 	noBorder?: boolean;
 	size?: CardSize;
 	transparent?: boolean;
+	class?: string;
 };
 
 const {
+	as: Tag = "article",
 	class: className,
 	noBorder = false,
 	size = "medium",
 	transparent = false,
-	...props
-} = Astro.props as Props;
+	type,
+	...rest
+} = Astro.props as Props & Record<string, unknown>;
+
+const passthrough =
+	Tag === "button" ? { ...rest, type: type ?? "button" } : rest;
+
+const cardClass = cn(
+	"flex h-fit w-full flex-col",
+	{
+		"bg-surface-base": !transparent,
+		"border-border-primary border": !noBorder,
+		"gap-3 rounded-xl px-4.5 py-3.5": size === "small",
+		"gap-4 rounded-2xl px-6 py-5": size === "medium",
+		"gap-4 rounded-3xl p-5 lg:p-7": size === "large",
+	},
+	className,
+);
 ---
 
-<article
-	class={cn(
-		"flex h-fit w-full flex-col",
-		{
-			"bg-surface-base": !transparent,
-			"border-border-primary border": !noBorder,
-			"gap-3 rounded-xl px-4.5 py-3.5": size === "small",
-			"gap-4 rounded-2xl px-6 py-5": size === "medium",
-			"gap-4 rounded-3xl p-5 lg:p-7": size === "large",
-		},
-		className,
-	)}
-	{...props}
->
+<Tag class={cardClass} {...passthrough}>
 	<slot />
-</article>
+</Tag>
