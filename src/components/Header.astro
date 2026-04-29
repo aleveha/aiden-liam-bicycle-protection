@@ -6,6 +6,7 @@ import InstagramIcon from "~/components/ui/icons/Instagram.astro";
 import FacebookIcon from "~/components/ui/icons/Facebook.astro";
 import Link from "~/components/ui/Link.astro";
 import Divider from "~/components/ui/Divider.astro";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "~/constants/contact";
 
 type NavItem = {
 	href: string;
@@ -88,7 +89,7 @@ const navItems: NavItem[] = [
 					<Link
 						aria-label="Instagram"
 						class="p-1"
-						href="https://www.instagram.com/aidenliamframeprotection"
+						href={INSTAGRAM_URL}
 						rel="noopener noreferrer"
 						target="_blank"
 					>
@@ -97,7 +98,7 @@ const navItems: NavItem[] = [
 					<Link
 						aria-label="Facebook"
 						class="p-1"
-						href="https://www.facebook.com/aidenliamframeprotectioninstalls"
+						href={FACEBOOK_URL}
 						rel="noopener noreferrer"
 						target="_blank"
 					>

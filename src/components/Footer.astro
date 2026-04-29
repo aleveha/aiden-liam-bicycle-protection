@@ -2,6 +2,7 @@
 import FacebookIcon from "~/components/ui/icons/Facebook.astro";
 import InstagramIcon from "~/components/ui/icons/Instagram.astro";
 import Link from "~/components/ui/Link.astro";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "~/constants/contact";
 ---
 
 <footer class="border-border-primary w-full border-t">
@@ -20,7 +21,7 @@ import Link from "~/components/ui/Link.astro";
 			<Link
 				aria-label="Instagram"
 				class="text-text-secondary p-1"
-				href="https://www.instagram.com/aidenliamframeprotection"
+				href={INSTAGRAM_URL}
 				rel="noopener noreferrer"
 				target="_blank"
 			>
@@ -30,7 +31,7 @@ import Link from "~/components/ui/Link.astro";
 			<Link
 				aria-label="Facebook"
 				class="text-text-secondary p-1"
-				href="https://www.facebook.com/aidenliamframeprotectioninstalls"
+				href={FACEBOOK_URL}
 				rel="noopener noreferrer"
 				target="_blank"
 			>
