@@ -1,0 +1,97 @@
+---
+import type { SvgComponent } from "astro/types";
+import Card from "~/components/ui/Card.astro";
+import Section from "~/components/ui/Section.astro";
+import FacebookIcon from "~/components/ui/icons/Facebook.astro";
+import InstagramIcon from "~/components/ui/icons/Instagram.astro";
+import MailIcon from "~/components/ui/icons/Mail.astro";
+import PhoneIcon from "~/components/ui/icons/Phone.astro";
+import {
+	EMAIL_DISPLAY,
+	EMAIL_URL,
+	FACEBOOK_URL,
+	INSTAGRAM_URL,
+	WHATSAPP_DISPLAY,
+	WHATSAPP_URL,
+} from "~/constants/contact";
+
+type ContactCard = {
+	title: string;
+	tag: string;
+	href: string;
+	ariaLabel: string;
+	icon: SvgComponent;
+};
+
+const cards: ContactCard[] = [
+	{
+		title: "WhatsApp",
+		tag: WHATSAPP_DISPLAY,
+		href: WHATSAPP_URL,
+		ariaLabel: `WhatsApp ${WHATSAPP_DISPLAY}`,
+		icon: PhoneIcon,
+	},
+	{
+		title: "Instagram",
+		tag: "@aidenliamframeprotection",
+		href: INSTAGRAM_URL,
+		ariaLabel: "Instagram @aidenliamframeprotection",
+		icon: InstagramIcon,
+	},
+	{
+		title: "Facebook",
+		tag: "@aidenliamframeprotectioninstalls",
+		href: FACEBOOK_URL,
+		ariaLabel: "Facebook page",
+		icon: FacebookIcon,
+	},
+	{
+		title: "Email",
+		tag: EMAIL_DISPLAY,
+		href: EMAIL_URL,
+		ariaLabel: `Email ${EMAIL_DISPLAY}`,
+		icon: MailIcon,
+	},
+];
+---
+
+<Section id="contact">
+	<p class="typography-headline-accent">Contact</p>
+
+	<h2 class="typography-headline-primary">
+		Reach out for quotes and scheduling
+	</h2>
+
+	<p class="typography-headline-secondary">
+		Coverage, timing, or quotes – reach out on any channel below. We respond
+		with next steps and booking details.
+	</p>
+
+	<div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-4">
+		{
+			cards.map(({ title, tag, href, ariaLabel, icon: Icon }) => {
+				return (
+					<Card
+						aria-label={ariaLabel}
+						as="a"
+						class="hover:border-accent-primary flex-row items-center"
+						href={href}
+						rel="noopener noreferrer"
+						size="small"
+						target="_blank"
+					>
+						<Icon class="text-accent-primary size-5 md:size-6" />
+						<span class="flex flex-col gap-1.5 text-left">
+							<span class="text-text-primary font-semibold">
+								{title}
+							</span>
+							<span class="text-text-primary text-sm font-medium">
+								{tag}
+							</span>
+						</span>
+					</Card>
+				);
+			})
+		}
+	</div>
+</Section>

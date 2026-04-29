@@ -1,0 +1,18 @@
+---
+import type { SvgComponent } from "astro/types";
+
+const props = Astro.props as SvgComponent;
+---
+
+<svg
+	fill="none"
+	stroke-linecap="round"
+	stroke-linejoin="round"
+	stroke-width="2"
+	stroke="currentColor"
+	viewBox="0 0 24 24"
+	{...props}
+>
+	<path d="m22 7-10 6L2 7"></path>
+	<rect height="16" rx="2" width="20" x="2" y="4"></rect>
+</svg>
