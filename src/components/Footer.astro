@@ -1,8 +1,13 @@
 ---
 import FacebookIcon from "~/components/ui/icons/Facebook.astro";
 import InstagramIcon from "~/components/ui/icons/Instagram.astro";
+import MapPinnedIcon from "~/components/ui/icons/MapPinned.astro";
 import Link from "~/components/ui/Link.astro";
-import { FACEBOOK_URL, INSTAGRAM_URL } from "~/constants/contact";
+import {
+	FACEBOOK_URL,
+	GOOGLE_BUSINESS_URL,
+	INSTAGRAM_URL,
+} from "~/constants/contact";
 ---
 
 <footer class="border-border-primary w-full border-t">
@@ -17,10 +22,9 @@ import { FACEBOOK_URL, INSTAGRAM_URL } from "~/constants/contact";
 			Aiden Liam Bicycle Protection
 		</a>
 
-		<div class="flex items-center gap-2 lg:gap-5">
+		<div class="flex items-center gap-2 lg:gap-5 [&>a]:p-1">
 			<Link
 				aria-label="Instagram"
-				class="text-text-secondary p-1"
 				href={INSTAGRAM_URL}
 				rel="noopener noreferrer"
 				target="_blank"
@@ -30,12 +34,20 @@ import { FACEBOOK_URL, INSTAGRAM_URL } from "~/constants/contact";
 
 			<Link
 				aria-label="Facebook"
-				class="text-text-secondary p-1"
 				href={FACEBOOK_URL}
 				rel="noopener noreferrer"
 				target="_blank"
 			>
 				<FacebookIcon class="size-4 sm:size-5" />
+			</Link>
+
+			<Link
+				aria-label="Google Maps — business profile and reviews"
+				href={GOOGLE_BUSINESS_URL}
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<MapPinnedIcon class="size-4 sm:size-5" />
 			</Link>
 		</div>
 	</div>

@@ -1661,21 +1661,14 @@
                       ]
                     },
                     {
-                      "id": "Gqq3G",
-                      "type": "ref",
-                      "ref": "e5nOj",
-                      "name": "cardRHBtn",
-                      "width": "fit_content",
-                      "height": "fit_content",
-                      "x": 44,
-                      "y": 313,
-                      "descendants": {
-                        "z09vU": {
-                          "content": "Book Richmond Hill",
-                          "x": 40,
-                          "y": 16
-                        }
-                      }
+                      "type": "text",
+                      "id": "locMapRHd",
+                      "name": "cardRHMaps",
+                      "fill": "$color.text.inverse",
+                      "content": "Open in Google Maps",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
                     }
                   ]
                 },
@@ -1747,21 +1740,14 @@
                       ]
                     },
                     {
-                      "id": "YWbWb",
-                      "type": "ref",
-                      "ref": "e5nOj",
-                      "name": "cardINBtn",
-                      "width": "fit_content",
-                      "height": "fit_content",
-                      "x": 44,
-                      "y": 313,
-                      "descendants": {
-                        "z09vU": {
-                          "content": "Book Innisfil",
-                          "x": 40,
-                          "y": 16
-                        }
-                      }
+                      "type": "text",
+                      "id": "locMapINd",
+                      "name": "cardINMaps",
+                      "fill": "$color.text.inverse",
+                      "content": "Open in Google Maps",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
                     }
                   ]
                 }
@@ -2343,7 +2329,7 @@
               "children": [
                 {
                   "type": "icon_font",
-                  "id": "gkjNL",
+                  "id": "pEATi",
                   "name": "igIcon",
                   "width": 16,
                   "height": 16,
@@ -2358,6 +2344,16 @@
                   "width": 16,
                   "height": 16,
                   "iconFontName": "facebook",
+                  "iconFontFamily": "lucide",
+                  "fill": "$color.text.secondary"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "gkjNL",
+                  "name": "gmIcon",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "map-pinned",
                   "iconFontFamily": "lucide",
                   "fill": "$color.text.secondary"
                 }
@@ -4394,21 +4390,14 @@
                       ]
                     },
                     {
-                      "id": "gRHBn",
-                      "type": "ref",
-                      "ref": "e5nOj",
-                      "name": "cardRHBtn",
-                      "width": "fit_content",
-                      "height": "fit_content",
-                      "x": 24,
-                      "y": 217,
-                      "descendants": {
-                        "z09vU": {
-                          "content": "Book Richmond Hill",
-                          "x": 32,
-                          "y": 12
-                        }
-                      }
+                      "type": "text",
+                      "id": "locMapRHm",
+                      "name": "cardRHMaps",
+                      "fill": "$color.text.inverse",
+                      "content": "Open in Google Maps",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
                     }
                   ]
                 },
@@ -4477,21 +4466,14 @@
                       ]
                     },
                     {
-                      "id": "wP23W",
-                      "type": "ref",
-                      "ref": "e5nOj",
-                      "name": "cardINBtn",
-                      "width": "fit_content",
-                      "height": "fit_content",
-                      "x": 24,
-                      "y": 217,
-                      "descendants": {
-                        "z09vU": {
-                          "content": "Book Innisfil",
-                          "x": 32,
-                          "y": 12
-                        }
-                      }
+                      "type": "text",
+                      "id": "locMapINm",
+                      "name": "cardINMaps",
+                      "fill": "$color.text.inverse",
+                      "content": "Open in Google Maps",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
                     }
                   ]
                 }
@@ -5278,48 +5260,34 @@
                   "alignItems": "center",
                   "children": [
                     {
-                      "type": "frame",
-                      "id": "PDe2k",
-                      "name": "instagramBtn",
-                      "stroke": {
-                        "thickness": 1
-                      },
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "Wkk2r",
-                          "name": "igIcon",
-                          "width": 18,
-                          "height": 18,
-                          "iconFontName": "instagram",
-                          "iconFontFamily": "lucide",
-                          "fill": "$color.text.primary"
-                        }
-                      ]
+                      "type": "icon_font",
+                      "id": "Wkk2r",
+                      "name": "igIcon",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "instagram",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.text.primary"
                     },
                     {
-                      "type": "frame",
-                      "id": "pQ2hn",
-                      "name": "facebookBtn",
-                      "stroke": {
-                        "thickness": 1
-                      },
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon_font",
-                          "id": "3LKGA",
-                          "name": "fbIcon",
-                          "width": 18,
-                          "height": 18,
-                          "iconFontName": "facebook",
-                          "iconFontFamily": "lucide",
-                          "fill": "$color.text.primary"
-                        }
-                      ]
+                      "type": "icon_font",
+                      "id": "3LKGA",
+                      "name": "fbIcon",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "facebook",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.text.primary"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "yL18d",
+                      "name": "gmIcon",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "map-pinned",
+                      "iconFontFamily": "lucide",
+                      "fill": "$color.text.primary"
                     }
                   ]
                 }
@@ -7068,21 +7036,14 @@
                       ]
                     },
                     {
-                      "id": "XNqC1",
-                      "type": "ref",
-                      "ref": "e5nOj",
-                      "name": "cardRHBtn",
-                      "width": "fit_content",
-                      "height": "fit_content",
-                      "x": 24,
-                      "y": 211,
-                      "descendants": {
-                        "z09vU": {
-                          "content": "Book Richmond Hill",
-                          "x": 36,
-                          "y": 14
-                        }
-                      }
+                      "type": "text",
+                      "id": "locMapRHt",
+                      "name": "cardRHMaps",
+                      "fill": "$color.text.inverse",
+                      "content": "Open in Google Maps",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
                     }
                   ]
                 },
@@ -7151,21 +7112,14 @@
                       ]
                     },
                     {
-                      "id": "bCiFg",
-                      "type": "ref",
-                      "ref": "e5nOj",
-                      "name": "cardINBtn",
-                      "width": "fit_content",
-                      "height": "fit_content",
-                      "x": 24,
-                      "y": 211,
-                      "descendants": {
-                        "z09vU": {
-                          "content": "Book Innisfil",
-                          "x": 36,
-                          "y": 14
-                        }
-                      }
+                      "type": "text",
+                      "id": "locMapINt",
+                      "name": "cardINMaps",
+                      "fill": "$color.text.inverse",
+                      "content": "Open in Google Maps",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
                     }
                   ]
                 }

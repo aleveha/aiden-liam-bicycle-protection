@@ -4,9 +4,14 @@ import MenuIcon from "~/components/ui/icons/Menu.astro";
 import XMarkIcon from "~/components/ui/icons/XMark.astro";
 import InstagramIcon from "~/components/ui/icons/Instagram.astro";
 import FacebookIcon from "~/components/ui/icons/Facebook.astro";
+import MapPinnedIcon from "~/components/ui/icons/MapPinned.astro";
 import Link from "~/components/ui/Link.astro";
 import Divider from "~/components/ui/Divider.astro";
-import { FACEBOOK_URL, INSTAGRAM_URL } from "~/constants/contact";
+import {
+	FACEBOOK_URL,
+	GOOGLE_BUSINESS_URL,
+	INSTAGRAM_URL,
+} from "~/constants/contact";
 
 type NavItem = {
 	href: string;
@@ -85,10 +90,9 @@ const navItems: NavItem[] = [
 
 				<Divider />
 
-				<div class="flex w-full items-center gap-4 px-5">
+				<div class="flex w-full items-center gap-4 px-5 [&>a]:p-1">
 					<Link
 						aria-label="Instagram"
-						class="p-1"
 						href={INSTAGRAM_URL}
 						rel="noopener noreferrer"
 						target="_blank"
@@ -97,12 +101,19 @@ const navItems: NavItem[] = [
 					</Link>
 					<Link
 						aria-label="Facebook"
-						class="p-1"
 						href={FACEBOOK_URL}
 						rel="noopener noreferrer"
 						target="_blank"
 					>
 						<FacebookIcon class="size-5" />
+					</Link>
+					<Link
+						aria-label="Google Maps — business profile and reviews"
+						href={GOOGLE_BUSINESS_URL}
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<MapPinnedIcon class="size-5" />
 					</Link>
 				</div>
 
