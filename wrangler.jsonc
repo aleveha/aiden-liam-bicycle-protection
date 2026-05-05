@@ -13,10 +13,6 @@
 		"directory": "./dist",
 		"binding": "ASSETS",
 	},
-	// Required for astro:assets `/_image` (Picture/Image). Transform uses env.IMAGES + env.ASSETS.
-	"images": {
-		"binding": "IMAGES",
-	},
 	"observability": {
 		"enabled": true,
 	},
