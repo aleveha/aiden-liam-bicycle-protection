@@ -3,6 +3,12 @@
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "aiden-liam-frame-protection-installs",
 	"main": "@astrojs/cloudflare/entrypoints/server",
+	"routes": [
+		{
+			"pattern": "aidenliamframeprotection.ca",
+			"custom_domain": true,
+		},
+	],
 	"assets": {
 		"directory": "./dist",
 		"binding": "ASSETS",
