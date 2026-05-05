@@ -1,7 +1,7 @@
 {
 	"compatibility_date": "2026-05-05",
 	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "aiden-liam-frame-protection-installs",
+	"name": "aiden-liam-bicycle-protection",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"routes": [
 		{
