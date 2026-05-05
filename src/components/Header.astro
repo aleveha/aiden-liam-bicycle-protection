@@ -41,7 +41,7 @@ const navItems: NavItem[] = [
 			Aiden Liam Bicycle Protection
 		</a>
 
-		<nav class="hidden items-center gap-6 lg:flex">
+		<nav aria-label="Primary" class="hidden items-center gap-6 lg:flex">
 			{
 				navItems.map((item) => (
 					<a
@@ -54,11 +54,19 @@ const navItems: NavItem[] = [
 			}
 		</nav>
 
-		<button class="p-1 lg:hidden" id="mobile-nav-open" type="button">
-			<MenuIcon class="size-5" />
+		<button
+			aria-controls="mobile-nav-dialog"
+			aria-expanded="false"
+			aria-label="Open menu"
+			class="p-1 lg:hidden"
+			id="mobile-nav-open"
+			type="button"
+		>
+			<MenuIcon aria-hidden="true" class="size-5" />
 		</button>
 
 		<dialog
+			aria-labelledby="mobile-nav-title"
 			id="mobile-nav-dialog"
 			class="backdrop:bg-overlay-dark m-0 h-dvh max-h-none w-screen max-w-none bg-transparent p-0"
 		>
@@ -68,10 +76,16 @@ const navItems: NavItem[] = [
 				<div class="flex items-center justify-between px-5">
 					<span
 						class="text-text-primary text-xl leading-6 font-semibold"
-						>Menu</span
+						id="mobile-nav-title"
 					>
-					<button id="mobile-nav-close">
-						<XMarkIcon class="size-5" />
+						Menu
+					</span>
+					<button
+						aria-label="Close menu"
+						id="mobile-nav-close"
+						type="button"
+					>
+						<XMarkIcon aria-hidden="true" class="size-5" />
 					</button>
 				</div>
 
@@ -139,10 +153,15 @@ const navItems: NavItem[] = [
 
 	openButton?.addEventListener("click", () => {
 		dialog?.showModal();
+		openButton?.setAttribute("aria-expanded", "true");
 	});
 
 	closeButton?.addEventListener("click", () => {
 		dialog?.close();
+	});
+
+	dialog?.addEventListener("close", () => {
+		openButton?.setAttribute("aria-expanded", "false");
 	});
 
 	links?.forEach((link) => {
