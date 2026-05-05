@@ -1,3 +1,4 @@
+import cloudflare from "@astrojs/cloudflare";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import { loadEnv } from "vite";
@@ -18,4 +19,5 @@ export default defineConfig({
 			},
 		},
 	},
+	adapter: cloudflare(),
 });
