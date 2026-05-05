@@ -1,8 +1,11 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import { loadEnv } from "vite";
+
+const env = loadEnv(import.meta.env.MODE, process.cwd(), "");
 
 const siteOrigin =
-	import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+	env.PUBLIC_SITE_URL?.replace(/\/$/, "") ||
 	"https://aidenliamframeprotection.ca";
 
 export default defineConfig({
