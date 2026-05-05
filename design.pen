@@ -7774,6 +7774,93 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "uY2ye",
+      "x": -2411,
+      "y": 0,
+      "name": "OG Image / Social Preview",
+      "metadata": {
+        "type": "unsplash",
+        "username": "acelanebikes",
+        "link": "https://unsplash.com/@acelanebikes",
+        "author": "Acelane Bikes"
+      },
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": [
+        {
+          "type": "image",
+          "enabled": true,
+          "url": "src/assets/hero.webp",
+          "mode": "fill"
+        },
+        "$color.overlay.dark",
+        "$color.overlay.dark"
+      ],
+      "stroke": {
+        "thickness": 1
+      },
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        52,
+        80
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "iF4qE",
+          "type": "ref",
+          "ref": "x2UNU",
+          "name": "heroBadge",
+          "content": "Certified RideWrap installer",
+          "fill": "#ff6a2a",
+          "x": 80,
+          "y": 155,
+          "fontSize": 32,
+          "fontWeight": "600",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "textAlign": "center",
+          "lineHeight": 1.25
+        },
+        {
+          "id": "cTLVo",
+          "type": "ref",
+          "ref": "ZDfDw",
+          "name": "heroH1",
+          "content": "Protect your bike\nRide without worry",
+          "fill": "#FFFFFF",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "lineHeight": 1.08,
+          "textAlign": "center",
+          "fontSize": 64,
+          "fontWeight": "700",
+          "letterSpacing": -0.5,
+          "y": 227,
+          "height": 0,
+          "x": 80
+        },
+        {
+          "type": "text",
+          "id": "aeGOM",
+          "name": "ogTagline",
+          "fill": "#E8E8E8",
+          "textGrowth": "fixed-width",
+          "width": "fit_content(638)",
+          "content": "Premium PPF & ceramic coating for road, gravel, and MTB. Serving the GTA & Simcoe.",
+          "lineHeight": 1.4,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28,
+          "fontWeight": "500"
+        }
+      ]
     }
   ],
   "themes": {
