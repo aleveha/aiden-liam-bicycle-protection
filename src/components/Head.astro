@@ -1,0 +1,108 @@
+---
+import ogImage from "~/assets/og-image.jpg";
+import {
+	EMAIL_DISPLAY,
+	FACEBOOK_URL,
+	GOOGLE_BUSINESS_URL,
+	INSTAGRAM_URL,
+	WHATSAPP_DISPLAY,
+} from "~/constants/contact";
+
+const META_SITE_NAME = "Aiden Liam Bicycle Protection";
+const META_TITLE = "Aiden Liam Bicycle Protection | RideWrap PPF & Ceramic";
+const META_DESCRIPTION =
+	"Certified RideWrap installer in Ontario. Paint protection film (PPF) and ceramic coating for road, gravel, and MTB. Richmond Hill, Innisfil & GTA pickup.";
+const META_KEYWORDS = [
+	"bicycle paint protection film",
+	"bike PPF",
+	"RideWrap installer",
+	"certified RideWrap",
+	"bicycle ceramic coating",
+	"bike frame protection",
+	"Ontario bike protection",
+	"Richmond Hill bicycle protection",
+	"Innisfil bicycle protection",
+	"GTA bike PPF",
+	"Simcoe bike protection",
+	"road bike PPF",
+	"gravel bike protection",
+	"mountain bike frame protection",
+].join(", ");
+const OG_IMAGE_ALT =
+	"Certified RideWrap bicycle protection installer and ceramic coating service for GTA and Simcoe riders";
+
+const CANONICAL_URL = new URL(Astro.url.pathname, Astro.site);
+const OG_IMAGE_URL = new URL(ogImage.src, Astro.site);
+
+const META_SCHEMA = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "BicycleStore",
+			name: META_SITE_NAME,
+			description: META_DESCRIPTION,
+			url: CANONICAL_URL.href,
+			email: EMAIL_DISPLAY,
+			telephone: WHATSAPP_DISPLAY,
+			sameAs: [INSTAGRAM_URL, FACEBOOK_URL, GOOGLE_BUSINESS_URL],
+			areaServed: [
+				{
+					"@type": "City",
+					name: "Richmond Hill",
+					containedInPlace: {
+						"@type": "AdministrativeArea",
+						name: "Ontario",
+						containedInPlace: {
+							"@type": "Country",
+							name: "Canada",
+						},
+					},
+				},
+				{
+					"@type": "City",
+					name: "Innisfil",
+					containedInPlace: {
+						"@type": "AdministrativeArea",
+						name: "Ontario",
+						containedInPlace: {
+							"@type": "Country",
+							name: "Canada",
+						},
+					},
+				},
+			],
+		},
+	],
+};
+---
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="description" content={META_DESCRIPTION} />
+	<meta name="keywords" content={META_KEYWORDS} />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href={CANONICAL_URL.href} />
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:site_name" content={META_SITE_NAME} />
+	<meta property="og:title" content={META_TITLE} />
+	<meta property="og:description" content={META_DESCRIPTION} />
+	<meta property="og:url" content={CANONICAL_URL.href} />
+	<meta property="og:image" content={OG_IMAGE_URL.href} />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content={String(ogImage.width)} />
+	<meta property="og:image:height" content={String(ogImage.height)} />
+	<meta property="og:image:alt" content={OG_IMAGE_ALT} />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={META_TITLE} />
+	<meta name="twitter:description" content={META_DESCRIPTION} />
+	<meta name="twitter:image" content={OG_IMAGE_URL.href} />
+
+	<title>{META_TITLE}</title>
+	<script type="application/ld+json" set:html={JSON.stringify(META_SCHEMA)} />
+</head>

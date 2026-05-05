@@ -1,5 +1,6 @@
 ---
 import Footer from "~/components/Footer.astro";
+import Head from "~/components/Head.astro";
 import Header from "~/components/Header.astro";
 import BottomCTASection from "~/components/sections/BottomCTA.astro";
 import ContactSection from "~/components/sections/Contact.astro";
@@ -14,11 +15,7 @@ import "~/styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Aiden Liam Bicycle Protection</title>
-	</head>
+	<Head />
 	<body>
 		<Header />
 		<main>
@@ -31,7 +28,7 @@ import "~/styles/global.css";
 			<ContactSection />
 			<FAQSection />
 			<BottomCTASection />
-			<Footer />
 		</main>
+		<Footer />
 	</body>
 </html>
