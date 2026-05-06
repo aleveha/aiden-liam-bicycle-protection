@@ -33,6 +33,7 @@ const OG_IMAGE_ALT =
 
 const CANONICAL_URL = new URL(Astro.url.pathname, Astro.site);
 const OG_IMAGE_URL = new URL(ogImage.src, Astro.site);
+const FAVICON_URL = new URL("/favicon.svg", Astro.site);
 
 const META_SCHEMA = {
 	"@context": "https://schema.org",
@@ -84,7 +85,7 @@ const META_SCHEMA = {
 	<meta name="keywords" content={META_KEYWORDS} />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href={CANONICAL_URL.href} />
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href={FAVICON_URL.href} type="image/svg+xml" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content="en" />
