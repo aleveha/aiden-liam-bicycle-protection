@@ -9,7 +9,7 @@ import { cn } from "~/lib/cn";
 import { HALF_VIEWPORT_IMAGE_SIZES } from "~/lib/image";
 
 type CarouselSlide = {
-	alt: string;
+	alt?: string;
 	src: ImageMetadata;
 	sizes?: string;
 };
@@ -50,7 +50,7 @@ const isSingleSlide = slides.length === 1;
 			)}
 		>
 			<Image
-				alt={slides[0].alt}
+				alt={slides[0].alt ?? ""}
 				class="h-full w-full object-cover"
 				decoding="async"
 				format="webp"
@@ -83,7 +83,7 @@ const isSingleSlide = slides.length === 1;
 					{slides.map((slide) => (
 						<div class="relative min-w-0 shrink-0 grow-0 basis-full">
 							<Image
-								alt={slide.alt}
+								alt={slide.alt ?? ""}
 								class="h-full w-full object-cover"
 								decoding="async"
 								format="webp"
