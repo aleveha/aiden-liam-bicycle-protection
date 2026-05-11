@@ -1,8 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
 import type { SvgComponent } from "astro/types";
-import CeramicCoatingImage from "~/assets/ceramic-coating.jpg";
-import PPFImage from "~/assets/ppf.jpg";
 import Card from "~/components/ui/Card.astro";
 import Carousel from "~/components/ui/Carousel.astro";
 import Section from "~/components/ui/Section.astro";
@@ -10,6 +8,8 @@ import MapPinCheckIcon from "~/components/ui/icons/MapPinCheck.astro";
 import MessagesIcon from "~/components/ui/icons/Messages.astro";
 import WranchIcon from "~/components/ui/icons/Wranch.astro";
 import { HALF_VIEWPORT_IMAGE_SIZES } from "~/lib/image";
+import CeramicCoatingImage from "../Services/ceramic-coating.jpg";
+import PPFImage from "../Services/ppf.jpg";
 
 type StepItem = {
 	title: string;
