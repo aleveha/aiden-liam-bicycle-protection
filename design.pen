@@ -130,7 +130,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "src/assets/hero.webp",
+              "url": "src/components/sections/Hero/hero.webp",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -255,7 +255,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/ppf.jpg",
+                      "url": "src/components/sections/Services/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -310,7 +310,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/ceramic-coating.jpg",
+                      "url": "src/components/sections/Services/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -858,7 +858,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "src/assets/ppf.jpg",
+                    "url": "src/components/sections/HowItWorks/carousel/carousel_01.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 24,
@@ -1604,7 +1604,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/richmond-hill.webp",
+                      "url": "src/components/sections/Locations/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -1683,7 +1683,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/innisfil.webp",
+                      "url": "src/components/sections/Locations/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2776,7 +2776,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "src/assets/hero.webp",
+              "url": "src/components/sections/Hero/hero.webp",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -2913,7 +2913,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/ppf.jpg",
+                      "url": "src/components/sections/Services/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -2969,7 +2969,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/ceramic-coating.jpg",
+                      "url": "src/components/sections/Services/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -3526,7 +3526,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "src/assets/ppf.jpg",
+                    "url": "src/components/sections/HowItWorks/carousel/carousel_01.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 16,
@@ -4336,7 +4336,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/richmond-hill.webp",
+                      "url": "src/components/sections/Locations/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -4412,7 +4412,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/innisfil.webp",
+                      "url": "src/components/sections/Locations/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -5421,7 +5421,7 @@
             {
               "type": "image",
               "enabled": true,
-              "url": "src/assets/hero.webp",
+              "url": "src/components/sections/Hero/hero.webp",
               "mode": "fill"
             },
             "$color.overlay.dark"
@@ -5554,7 +5554,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/ppf.jpg",
+                      "url": "src/components/sections/Services/ppf.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -5610,7 +5610,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/ceramic-coating.jpg",
+                      "url": "src/components/sections/Services/ceramic-coating.jpg",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -6174,7 +6174,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "src/assets/ppf.jpg",
+                    "url": "src/components/sections/HowItWorks/carousel/carousel_01.jpg",
                     "mode": "fill"
                   },
                   "cornerRadius": 16,
@@ -6982,7 +6982,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/richmond-hill.webp",
+                      "url": "src/components/sections/Locations/richmond-hill.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -7058,7 +7058,7 @@
                     {
                       "type": "image",
                       "enabled": true,
-                      "url": "src/assets/innisfil.webp",
+                      "url": "src/components/sections/Locations/innisfil.webp",
                       "mode": "fill"
                     },
                     "$color.overlay.dark"
@@ -7794,7 +7794,7 @@
         {
           "type": "image",
           "enabled": true,
-          "url": "src/assets/hero.webp",
+          "url": "src/components/sections/Hero/hero.webp",
           "mode": "fill"
         },
         "$color.overlay.dark",
