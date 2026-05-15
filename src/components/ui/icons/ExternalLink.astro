@@ -1,0 +1,19 @@
+---
+import type { JSX } from "astro/jsx-runtime";
+
+const { "stroke-width": strokeWidth = "2", ...props } =
+	Astro.props as JSX.SVGAttributes;
+---
+
+<svg
+	fill="none"
+	stroke-linecap="round"
+	stroke-linejoin="round"
+	stroke-width={strokeWidth}
+	stroke="currentColor"
+	viewBox="0 0 24 24"
+	{...props}
+>
+	<path d="M7 17 17 7"></path>
+	<path d="M8 7h9v9"></path>
+</svg>

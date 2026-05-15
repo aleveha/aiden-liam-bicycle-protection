@@ -4,9 +4,11 @@ import type { SvgComponent } from "astro/types";
 import Card from "~/components/ui/Card.astro";
 import Carousel from "~/components/ui/Carousel.astro";
 import Section from "~/components/ui/Section.astro";
+import ExternalLinkIcon from "~/components/ui/icons/ExternalLink.astro";
 import MapPinCheckIcon from "~/components/ui/icons/MapPinCheck.astro";
 import MessagesIcon from "~/components/ui/icons/Messages.astro";
 import WranchIcon from "~/components/ui/icons/Wranch.astro";
+import { GOOGLE_BUSINESS_URL } from "~/constants/contact";
 import { HALF_VIEWPORT_IMAGE_SIZES } from "~/lib/image";
 import CeramicCoatingImage from "../Services/ceramic-coating.jpg";
 import PPFImage from "../Services/ppf.jpg";
@@ -96,4 +98,29 @@ const carouselSlides = [CeramicCoatingImage, PPFImage, ...howItWorksSlides].map(
 			slides={carouselSlides}
 		/>
 	</div>
+
+	<Card
+		aria-label="Read 5-star Google reviews"
+		as="a"
+		class="group hover:border-accent-primary trasition-all relative gap-1.5 duration-200"
+		href={GOOGLE_BUSINESS_URL}
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		<div class="flex w-full items-center gap-2 md:justify-start md:gap-2.5">
+			<p class="text-accent-primary font-bold lg:text-lg">★★★★★</p>
+			<p class="text-text-primary text-sm font-semibold lg:text-base">
+				5.0 rating on Google
+			</p>
+		</div>
+		<p class="text-text-secondary text-sm">
+			See what riders say about installation quality and turnaround.
+		</p>
+
+		<ExternalLinkIcon
+			aria-hidden="true"
+			class="text-text-primary group-hover:text-accent-primary group-focus-visible:text-accent-primary absolute top-3 right-3 size-6 transition duration-200 motion-reduce:transition-none md:size-7 lg:size-8"
+			stroke-width="1.5"
+		/>
+	</Card>
 </Section>
