@@ -964,6 +964,86 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "FvlJo",
+              "name": "locReviewsCta",
+              "width": "fill_container",
+              "fill": "$color.surface.base",
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$color.border.primary"
+              },
+              "gap": 24,
+              "padding": [
+                18,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pUhsZ",
+                  "name": "locReviewsContent",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KmapS",
+                      "name": "locReviewsRatingRow",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m2gAr",
+                          "name": "locReviewsStars",
+                          "fill": "$color.accent.primary",
+                          "content": "★★★★★",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gd93O",
+                          "name": "locReviewsRating",
+                          "fill": "$color.text.primary",
+                          "content": "5.0 rating on Google",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "rtDS5",
+                      "name": "locReviewsSub",
+                      "fill": "$color.text.secondary",
+                      "content": "See what riders say about installation quality and turnaround.",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon_font",
+                  "id": "l42rTG",
+                  "name": "reviewsLinkIcon",
+                  "rotation": -360,
+                  "width": 36,
+                  "height": 36,
+                  "iconFontName": "arrow-up-right",
+                  "iconFontFamily": "lucide",
+                  "fill": "$color.accent.primary"
+                }
+              ]
             }
           ]
         },
@@ -3632,6 +3712,88 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "P2yvWU",
+              "name": "locReviewsCta",
+              "width": "fill_container",
+              "fill": "$color.surface.base",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$color.border.primary"
+              },
+              "gap": 24,
+              "padding": [
+                14,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WUmzQ",
+                  "name": "locReviewsContent",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JIfQb",
+                      "name": "locReviewsRatingRow",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QrJVn",
+                          "name": "locReviewsStars",
+                          "fill": "$color.accent.primary",
+                          "content": "★★★★★",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "sKBox",
+                          "name": "locReviewsRating",
+                          "fill": "$color.text.primary",
+                          "content": "5.0 rating on Google",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "AoSHZ",
+                      "name": "locReviewsSub",
+                      "fill": "$color.text.secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "See what riders say about installation quality and turnaround.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon_font",
+                  "id": "ujfc1",
+                  "name": "reviewsLinkIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "arrow-up-right",
+                  "iconFontFamily": "lucide",
+                  "fill": "$color.accent.primary"
+                }
+              ]
             }
           ]
         },
@@ -6278,6 +6440,85 @@
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wgxtY",
+              "name": "locReviewsCta",
+              "width": "fill_container",
+              "fill": "$color.surface.base",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$color.border.primary"
+              },
+              "gap": 24,
+              "padding": [
+                14,
+                18
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "t89Xu3",
+                  "name": "locReviewsContent",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "h54Re",
+                      "name": "locReviewsRatingRow",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ryZmK",
+                          "name": "locReviewsStars",
+                          "fill": "$color.accent.primary",
+                          "content": "★★★★★",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hkojA",
+                          "name": "locReviewsRating",
+                          "fill": "$color.text.primary",
+                          "content": "5.0 rating on Google",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "YvSWd",
+                      "name": "locReviewsSub",
+                      "fill": "$color.text.secondary",
+                      "content": "See what riders say about installation quality and turnaround.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon_font",
+                  "id": "dE1ys",
+                  "name": "reviewsLinkIcon",
+                  "width": 28,
+                  "height": 28,
+                  "iconFontName": "arrow-up-right",
+                  "iconFontFamily": "lucide",
+                  "fill": "$color.accent.primary"
                 }
               ]
             }
