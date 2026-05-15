@@ -17,6 +17,7 @@ type LocationItem = {
 	region: string;
 	description: string;
 	image: ImageMetadata;
+	mapsUrl: string;
 };
 
 const items: LocationItem[] = [
@@ -26,6 +27,7 @@ const items: LocationItem[] = [
 		description:
 			"Convenient for York Region riders and fast GTA drop-offs.",
 		image: RichmondHillLocationMapImage,
+		mapsUrl: GOOGLE_BUSINESS_URL,
 	},
 	{
 		title: "Innisfil",
@@ -33,6 +35,7 @@ const items: LocationItem[] = [
 		description:
 			"Great option for Simcoe-area riders and nearby pickup requests.",
 		image: InnisfilLocationMapImage,
+		mapsUrl: "https://maps.app.goo.gl/N6NpSCj7wdHhUhae6?g_st=ic",
 	},
 ];
 ---
@@ -51,7 +54,7 @@ const items: LocationItem[] = [
 
 	<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
 		{
-			items.map(({ title, region, description, image }) => (
+			items.map(({ title, region, description, image, mapsUrl }) => (
 				<Card
 					class="text-text-inverse relative aspect-4/3 min-h-90 justify-between overflow-hidden"
 					noBorder
@@ -68,7 +71,7 @@ const items: LocationItem[] = [
 
 					<Link
 						class="text-text-inverse hover:text-unset w-fit bg-[linear-gradient(currentColor,currentColor)] bg-size-[0%_2px] bg-bottom bg-no-repeat pb-0.5 font-medium transition-all duration-300 hover:bg-size-[100%_2px] motion-reduce:transition-none"
-						href={GOOGLE_BUSINESS_URL}
+						href={mapsUrl}
 						rel="noopener noreferrer"
 						target="_blank"
 					>
